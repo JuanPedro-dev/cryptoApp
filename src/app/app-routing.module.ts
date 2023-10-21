@@ -4,7 +4,7 @@ import { AuthModule } from './core/auth/auth.module';
 import { CryptoModule } from './core/crypto/crypto.module';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
   {
     path: 'home',
     loadChildren: () =>
@@ -20,8 +20,9 @@ const routes: Routes = [
     loadChildren: () =>
       import('./core/crypto/crypto.module').then((m) => m.CryptoModule),
   },
+  { path: '**',redirectTo: 'not-found', pathMatch: 'full' },
   {
-    path: '**',
+    path: 'not-found',
     loadChildren: () =>
       import('./core/not-found/not-found.module').then((m) => m.NotFoundModule),
   },

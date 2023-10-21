@@ -1,1 +1,57 @@
-<h1 style="text-align: center;">Aquí va el login</h1>
+<div class="container-center" >
+
+    <div class="login">
+        <img class="login-img" src="../../../../assets/img/police-man-icon.svg" alt="login img">
+
+        <h1 class="login--tittle">Inicio Sesión</h1>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
+
+
+            <mat-form-field class="w-80">
+                <mat-label>User Name</mat-label>
+                <input 
+                    matInput 
+                    #inputName
+                    [formControl]="userFormControl"
+                    [errorStateMatcher]="matcher"
+                    autocomplete="off"
+                >
+                <mat-error 
+                    *ngIf="userFormControl.hasError('minlength') && !userFormControl.hasError('required')"
+                >
+                    Min {{minLength}} characters!
+                </mat-error>
+                <mat-error *ngIf="userFormControl.hasError('required')">
+                    User Name is <strong>required</strong>
+                </mat-error>
+            </mat-form-field>
+    
+            <mat-form-field class="w-80">
+                <mat-label>Enter your password</mat-label>
+                <input 
+                    autocomplete="off" 
+                    matInput [type]="hide ? 'password' : 'text'"
+                    #inputPass
+                    [formControl]="passwordFormControl"
+                >
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error 
+                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')"
+                >
+                    Min {{minLength}} characters!
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Password is <strong>required</strong>
+                </mat-error>
+    
+            </mat-form-field>
+            
+            <button class="btn w-80" mat-raised-button color="primary" [disabled]="formLogin.invalid">Login</button> 
+            <button class="btn w-80" routerLink="/auth/sign-up" mat-raised-button color="primary" [disabled]="formLogin.valid ">Register</button> 
+        </form>
+    </div>
+</div>
