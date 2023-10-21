@@ -4,6 +4,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "outDir": "./dist/out-tsc",
+    "resolveJsonModule": true,
     "forceConsistentCasingInFileNames": true,
     "strict": true,
     "noImplicitOverride": true,
@@ -19,6 +20,11 @@
     "target": "ES2022",
     "module": "ES2022",
     "useDefineForClassFields": false,
+    "paths":{
+      "@core/*":["src/app/core/*"],
+      "@modules/*":["src/app/modules/*"],
+      "@shared/*":["src/app/shared/*"]
+    },
     "lib": [
       "ES2022",
       "dom"

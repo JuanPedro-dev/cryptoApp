@@ -1,35 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { AuthModule } from './core/auth/auth.module';
-import { CryptoModule } from './core/crypto/crypto.module';
+import { LandingPageComponent } from '@modules/landing/components/landing-page/landing-page.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: 'home', pathMatch: 'full' },
-  {
-    path: 'home',
-    loadChildren: () =>
-      import('./core/home-page/home-page.module').then((m) => m.HomePageModule),
-  },
   {
     path: 'auth',
-    loadChildren: () =>
-      import('./core/auth/auth.module').then((m) => m.AuthModule),
+    loadChildren: () => import("./modules/auth/auth.module").then(m => m.AuthModule)
   },
   {
-    path: 'crypto',
-    loadChildren: () =>
-      import('./core/crypto/crypto.module').then((m) => m.CryptoModule),
+    path: '',
+    component: LandingPageComponent,
+    loadChildren: () => import("./modules/landing/landing.module").then(m => m.LandingModule)
   },
-  { path: '**',redirectTo: 'not-found', pathMatch: 'full' },
   {
-    path: 'not-found',
-    loadChildren: () =>
-      import('./core/not-found/not-found.module').then((m) => m.NotFoundModule),
+    path: 'main',
+    loadChildren: () => import("./modules/main/main.module").then(m => m.MainModule)
   },
+  {
+    path: 'price',
+    loadChildren: () => import("./modules/price/price.module").then(m => m.PriceModule)
+  }
+
+
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule],
+  exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
