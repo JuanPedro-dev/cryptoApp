@@ -1,0 +1,38 @@
+
+.login {
+  max-width: 420px;
+  text-align: center;
+
+  @media screen and (min-width: 600px) {
+    & {
+      background: rgba(245, 245, 245, 0.732);
+      border: 1px solid black;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.login--tittle {
+  font-size: 2rem;
+  font-weight: 500;
+}
+
+.login-img {
+  display: flex;
+  margin-inline: auto;
+  max-width: 5rem;
+  padding-bottom: 1rem;
+}
+
+mat-form-field {
+  width: 90%;
+}
+
+.container-btn{
+  display: flex;
+  justify-content: space-evenly;
+}
+
+
