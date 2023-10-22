@@ -1,19 +1,10 @@
 import { Component, OnInit, inject } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, FormControl, FormGroupDirective, NgForm, Form } from '@angular/forms';
+import { FormGroup, FormBuilder, Validators, FormControl } from '@angular/forms';
 
 
-import { ErrorStateMatcher } from '@angular/material/core';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
-
-
-/** Error when invalid control is dirty, touched, or submitted. */
-export class MyErrorStateMatcher implements ErrorStateMatcher {
-  isErrorState(control: FormControl | null, form: FormGroupDirective | NgForm | null): boolean {
-    const isSubmitted = form && form.submitted;
-    return !!(control && control.invalid && (control.dirty || control.touched || isSubmitted));
-  }
-}
+import { MyErrorStateMatcher } from '../../interface/auth';
 
 
 @Component({
@@ -44,14 +35,20 @@ export class SignInComponent implements OnInit{
 
   onSubmit():void{
     // TODO: verificación
-    if(true){
 
-      this.router.navigate(['/auth/dashboard'])
+    let valid:boolean = true; 
+    this.validateAuth();
+
+    if(valid){
+      this.router.navigate(['/crypto'])
     } else {
       this.launchError(); 
       this.formLogin.reset();
     }
-
+  }
+  
+  validateAuth() {
+    throw new Error('Method not implemented.');
   }
 
   launchError(): void{
@@ -61,4 +58,6 @@ export class SignInComponent implements OnInit{
       duration: 5000,
     })
   }
+  
 }
+

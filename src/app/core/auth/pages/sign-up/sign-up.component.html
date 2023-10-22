@@ -1,1 +1,81 @@
-<h1 style="text-align: center;">Aquí va el Registro</h1>
+<div class="container-center">
+
+    <div class="login">
+
+        <h1 class="login--tittle">Crear una cuenta</h1>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
+
+            <mat-form-field>
+                <mat-label>Nombre de Usuario</mat-label>
+                <input matInput #inputName [formControl]="userFormControl" [errorStateMatcher]="matcher"
+                    autocomplete="off">
+                <mat-error *ngIf="userFormControl.hasError('minlength') && !userFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="userFormControl.hasError('required')">
+                    Nombre de Usuario <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="example-full-width">
+                <mat-label>Email</mat-label>
+                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                       placeholder="johnDoe@example.com">
+                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                  Ingrese un mail valido
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                  Email es <strong>requerido</strong>
+                </mat-error>
+                <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email es <strong>requerido</strong>
+                </mat-error>
+              </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Introduce tu contraseña</mat-label>
+                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                    [formControl]="passwordFormControl">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error
+                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Contraseña es <strong>requerida</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Confirma tu contraseña</mat-label>
+                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                    [formControl]="passwordConfirmFormControl">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error
+                    *ngIf="passwordConfirmFormControl.hasError('minlength') && !passwordConfirmFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="passwordConfirmFormControl.hasError('required')">
+                    Contraseña es <strong>requerida</strong>
+                </mat-error>
+            </mat-form-field>
+
+             <!-- TODO: replicar estilo -->
+            <mat-error style="text-align: left;" *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
+                Contraseñas <strong>diferentes</strong>
+            </mat-error>
+
+        </form>
+        <div class="container-btn">
+            <button class="btn" mat-button color="primary" routerLink="/auth/sign-in" >Login</button>
+            <button class="btn" mat-raised-button color="primary"  [disabled]="formLogin.invalid ">Crear Cuenta</button>
+        </div>
+    </div>
+</div>

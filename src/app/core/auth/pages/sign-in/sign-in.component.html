@@ -1,4 +1,4 @@
-<div class="container-center" >
+<div class="container-center">
 
     <div class="login">
         <img class="login-img" src="../../../../assets/img/police-man-icon.svg" alt="login img">
@@ -7,51 +7,40 @@
 
         <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
 
-
-            <mat-form-field class="w-80">
-                <mat-label>User Name</mat-label>
-                <input 
-                    matInput 
-                    #inputName
-                    [formControl]="userFormControl"
-                    [errorStateMatcher]="matcher"
-                    autocomplete="off"
-                >
-                <mat-error 
-                    *ngIf="userFormControl.hasError('minlength') && !userFormControl.hasError('required')"
-                >
-                    Min {{minLength}} characters!
+            <mat-form-field>
+                <mat-label>Nombre de Usuario</mat-label>
+                <input matInput #inputName [formControl]="userFormControl" [errorStateMatcher]="matcher"
+                    autocomplete="off">
+                <mat-error *ngIf="userFormControl.hasError('minlength') && !userFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
                 </mat-error>
                 <mat-error *ngIf="userFormControl.hasError('required')">
-                    User Name is <strong>required</strong>
+                    Nombre de Usuario <strong>requerido</strong>
                 </mat-error>
             </mat-form-field>
-    
-            <mat-form-field class="w-80">
-                <mat-label>Enter your password</mat-label>
-                <input 
-                    autocomplete="off" 
-                    matInput [type]="hide ? 'password' : 'text'"
-                    #inputPass
-                    [formControl]="passwordFormControl"
-                >
+
+            <mat-form-field>
+                <mat-label>Introduce tu contraseña</mat-label>
+                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                    [formControl]="passwordFormControl">
                 <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                     [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
                 </button>
-                <mat-error 
-                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')"
-                >
-                    Min {{minLength}} characters!
+                <mat-error
+                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
                 </mat-error>
                 <mat-error *ngIf="passwordFormControl.hasError('required')">
-                    Password is <strong>required</strong>
+                    Contraseña es <strong>requerida</strong>
                 </mat-error>
-    
             </mat-form-field>
+
             
-            <button class="btn w-80" mat-raised-button color="primary" [disabled]="formLogin.invalid">Login</button> 
-            <button class="btn w-80" routerLink="/auth/sign-up" mat-raised-button color="primary" [disabled]="formLogin.valid ">Register</button> 
         </form>
+        <div class="container-btn">
+            <button class="btn" mat-button color="primary" routerLink="/auth/sign-up" >Crear Cuenta</button>
+            <button class="btn" mat-raised-button color="primary" [disabled]="formLogin.invalid">Login</button>
+        </div>
     </div>
 </div>
