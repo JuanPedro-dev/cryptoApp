@@ -1,5 +1,5 @@
-import { Component, OnInit, inject } from '@angular/core';
-import {
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import { 
   FormBuilder,
   FormControl,
   FormGroup,
@@ -10,20 +10,23 @@ import { Router } from '@angular/router';
 import { MyErrorStateMatcher } from '../../interface/auth';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserService } from '@modules/auth/services/user.service';
-import { User } from '@modules/auth/interface/user';
+import { UserService } from '../../services/user.service';
+import { User } from '../../interface/user';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'auth-sign-up',
   templateUrl: './sign-up.component.html',
   styleUrls: ['./sign-up.component.scss'],
 })
-export class SignUpComponent implements OnInit {
+export class SignUpComponent implements OnInit, OnDestroy {
+
   private formBuilder: FormBuilder = inject(FormBuilder);
   private _snackBar: MatSnackBar = inject(MatSnackBar);
   private router: Router = inject(Router);
   private userService: UserService = inject(UserService);
-  
+  private userSubscription: Subscription = new Subscription
+
   hide = true;
   minLength: number = 4;
 
@@ -55,10 +58,16 @@ export class SignUpComponent implements OnInit {
     });
   }
 
+  ngOnDestroy() {
+    if (this.userSubscription) {
+      this.userSubscription.unsubscribe();
+    }
+  }
+
   onSubmit(): void {
     console.log(this.formLogin.value);
     
-    this.userService.addUser(this.formLogin.value).subscribe({
+    const subscription = this.userService.addUser(this.formLogin.value).subscribe({
       next: (user: User) => {
         // console.log(`Usuario agregado: {${user.id}, ${user.name}, ${user.password}}`);
       },
@@ -67,8 +76,9 @@ export class SignUpComponent implements OnInit {
       }
     })
 
-    // TODO: redirigir a la sección de criptomonedas
-    this.router.navigate(['']);
+    this.userSubscription.add(subscription);
+
+    this.router.navigate(['/crypto']);
     this.formLogin.reset();
   }
 }

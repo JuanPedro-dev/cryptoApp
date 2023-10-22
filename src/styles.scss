@@ -5,10 +5,14 @@
 html,
 body {
   height: 100%;
+  background: linear-gradient(to right bottom, #09326c, #c9519c);
+  background-attachment: fixed;
+  background-repeat: no-repeat;
 }
 body {
   margin: 0;
   font-family: Roboto, "Helvetica Neue", sans-serif;
+
 }
 
 .container-center {
@@ -25,6 +29,3 @@ body {
   padding: 1.5rem;
   font-family: "Google Sans", Roboto, Arial, sans-serif;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
