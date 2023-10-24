@@ -1,0 +1,65 @@
+/* Estilos para la tabla en general */
+.crypto-table {
+    width: 100%;
+    margin: 20px auto;
+    background-color: #333;
+    color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-collapse: collapse;
+    min-height: 60px; /* Altura mínima deseada */
+    max-height: 60px; /* Altura máxima deseada */
+    vertical-align: middle; /* Alinea verticalmente el contenido en el centro */
+    overflow: hidden; /* Oculta el contenido que desborda la celda */
+    white-space: nowrap; /* Evita que el contenido se divida en varias líneas */
+    text-overflow: ellipsis; /* Agrega puntos suspensivos si el contenido desborda */
+  }
+  
+  /* Estilos para la cabecera de la tabla (thead) */
+  .crypto-table thead {
+    background-color: #444;
+  }
+  
+  /* Estilos para las celdas en la cabecera (th) */
+  /* Estilos para las celdas en la cabecera (th) */
+  .crypto-table th {
+      font-size: 18px;
+      padding: 15px;
+      background-color: #333;
+      color: #fff;
+      border-bottom: 2px solid #444;
+      vertical-align: left; /* Centra verticalmente el tbody */
+  }
+  
+  
+  /* Estilos para el cuerpo de la tabla (tbody) */
+  .crypto-table tbody {
+    vertical-align: middle; /* Centra verticalmente el tbody */
+  }
+  
+  /* Estilos para las filas (tr) del tbody */
+  .crypto-table tbody tr {
+    border-top: 1px solid #444; /* Agrega una línea superior delgada entre las filas del tbody */
+  }
+  
+  /* Estilos para las imágenes */
+  /* Estilos para las imágenes dentro del tbody */
+  .crypto-table tbody img {
+    vertical-align: middle; /* Alinea verticalmente las imágenes */
+  }
+  /* Ajustes de espaciado entre elementos en la misma celda */
+  .crypto-image {
+    width: 24px; /* Tamaño de la imagen */
+    height: auto; /* Mantén la proporción de la imagen */
+    margin-right: 10px; /* Espaciado de 5px entre la imagen y el nombre */
+    vertical-align: middle; /* Alinea verticalmente la imagen */
+  }
+  
+  
+  .crypto-name {
+      margin-right: 10px; /* Añade un espaciado de 5px entre el nombre y el símbolo */
+  }
+  
+  /* Estilos para el símbolo */
+  .crypto-symbol {
+      color: #dddddd6c; /* Cambia el color del símbolo a un tono más oscuro que el blanco */
+  }
