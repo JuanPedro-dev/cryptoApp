@@ -1,0 +1,50 @@
+<div class="container">
+  <mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+  </mat-form-field>
+
+  <div class="mat-elevation-z8 container--table example-table-container">
+    <table mat-table [dataSource]="dataSource" matSort>
+
+      <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table--header"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="table--row"></tr>
+
+      <ng-container matColumnDef="market_cap_rank">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Rank </th>
+        <td mat-cell *matCellDef="let row"> {{row.market_cap_rank}}</td>
+      </ng-container>
+
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </th>
+        <td class="container-name" mat-cell *matCellDef="let row">
+          <img class="crypto-image" src="{{ row.image }}" alt="">
+          {{ row.name }}
+        </td>
+      </ng-container>
+
+      <ng-container matColumnDef="current_price">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Precio </th>
+        <td mat-cell *matCellDef="let row"> {{row.current_price | currency }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="high_24h">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Máximo 24hs </th>
+        <td mat-cell *matCellDef="let row"> {{row.high_24h | currency }} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="low_24h">
+        <th mat-header-cell *matHeaderCellDef mat-sort-header> Mínimo 24hs </th>
+        <td mat-cell *matCellDef="let row"> {{row.low_24h | currency }} </td>
+      </ng-container>
+
+      <tr class="mat-row" *matNoDataRow>
+        <td class="mat-cell" colspan="4">No data load or matching the filter "{{input.value}}"</td>
+      </tr>
+
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 7, 10, 25]" aria-label="Select page of users"></mat-paginator>
+  </div>
+</div>
+

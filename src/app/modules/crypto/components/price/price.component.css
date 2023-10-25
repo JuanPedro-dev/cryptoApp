@@ -1,0 +1,49 @@
+@media screen and (min-width: 600px) {
+  .container {
+    display: block;
+    margin: 2rem auto;
+    width: 80%;
+  }
+}
+
+.example-table-container {
+  position: relative;
+  min-height: 200px;
+  max-height: 400px;
+  overflow: auto;
+}
+
+table {
+  width: 100%;
+}
+
+.mat-mdc-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+.table--header {
+  background-color: rgb(129, 138, 200);
+  color: white;
+  text-align: center;
+}
+
+.table--row:nth-child(2n) {
+  background-color: #f1f1f1;
+}
+
+.container--table {
+  position: relative;
+  overflow: auto;
+}
+
+.crypto-image{
+  width: 1rem;
+  padding-right: 1rem;
+}
+
+.container-name{
+  display: flex;
+  align-items: center;
+  height: inherit;
+}
