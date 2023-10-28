@@ -30,8 +30,7 @@ export class PriceComponent implements OnInit, OnDestroy {
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
   ngOnInit() {
-    this.onLoad();
-    console.log('THHIIS',this.onLoad())
+    this.onLoad();  
   }
 
   ngAfterViewInit() {
