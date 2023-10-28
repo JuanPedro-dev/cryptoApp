@@ -32,10 +32,20 @@ export class PriceService {
    *
    * @returns An Observable that emits an array of cryptocurrencies.
    */
-  public getListCriptoPrice(): Observable<Price[]> {
-    return this.http
-      .get<Price[]>(this.cryptoURL, { params })
-      .pipe(catchError(this.handleError<Price[]>('getListCriptoPrice', [])));
+   public getListCriptoPrice(): Observable<Price[]> {
+    // Configura los parámetros para obtener el listado completo
+    const params = new HttpParams()
+      .set('vs_currency', 'usd')
+      .set('order', 'market_cap_desc')
+      .set('per_page', '100')
+      .set('page', '1')
+      .set('sparkline', 'false')
+      .set('locale', 'en');
+
+    return this.http.get<Price[]>(this.cryptoURL, { params })
+      .pipe(
+        catchError(this.handleError<Price[]>('getListCriptoPrice', []))
+      );
   }
 
     /**

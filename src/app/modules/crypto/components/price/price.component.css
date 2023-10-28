@@ -24,7 +24,7 @@ table {
 
 .table--header {
   background-color: rgb(129, 138, 200);
-  color: white;
+  color: rgb(255, 255, 255);
   text-align: center;
 }
 
