@@ -4,7 +4,7 @@
     <ul>
       <li *ngFor="let coin of cryptoTrending.coins">
         <div class="crypto-item">
-          <img [src]="coin.item.thumb" alt="{{ coin.item.name }}" />
+          <img [src]="coin.item.small" alt="{{ coin.item.name }}" />
           <div class="crypto-details">
             <p><strong>Name:</strong>  {{ coin.item.name }}</p>
             <p><strong>Symbol: </strong> {{ coin.item.symbol }}</p>
