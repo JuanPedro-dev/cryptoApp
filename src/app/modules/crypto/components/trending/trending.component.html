@@ -6,9 +6,9 @@
         <div class="crypto-item">
           <img [src]="coin.item.thumb" alt="{{ coin.item.name }}" />
           <div class="crypto-details">
-            <p>Name: {{ coin.item.name }}</p>
-            <p>Symbol: {{ coin.item.symbol }}</p>
-            <p>Market Cap Rank: {{ coin.item.market_cap_rank }}</p>
+            <p><strong>Name:</strong>  {{ coin.item.name }}</p>
+            <p><strong>Symbol: </strong> {{ coin.item.symbol }}</p>
+            <p><strong>Market Cap Rank: </strong> {{ coin.item.market_cap_rank }}</p>
           </div>
         </div>
       </li>
@@ -22,9 +22,9 @@
         <div class="crypto-item">
           <img src="{{ coin.thumb }}" alt="" />
           <div class="crypto-details">
-            <p>Name: {{ coin.name }}</p>
-            <p>Symbol: {{ coin.native_currency_symbol }}</p>
-            <p>Floor Price Market: {{ coin.floor_price_in_native_currency }}</p>
+            <p><strong>Name:</strong> {{ coin.name }}</p>
+            <p><strong>Symbol: </strong> {{ coin.native_currency_symbol }}</p>
+            <p><strong>Floor Price Market:</strong>  {{ coin.floor_price_in_native_currency }}</p>
           </div>
         </div>
       </li>
