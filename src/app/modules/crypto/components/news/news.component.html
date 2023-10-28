@@ -1,15 +1,31 @@
-
 <div class="container">
 
-  <h1>Noticias de Criptomonedas</h1>  
-  <div class="noticia" *ngFor="let notice of notices.Data">    
-    <img class="imagen" src="{{notice.imageurl}}" alt="Imagen de la noticia">
-    <h2 class="titulo">{{notice.title}}</h2>   
-    <p class="fuente">{{notice.source}}</p> 
-    <p>{{notice.body}}</p>     
-    <p>
-      <a href="{{notice.url}}" target="_blank">Leer más</a>
-    </p>
-  </div>
+  <h1>Noticias de Criptomonedas</h1>
+
+  <div class="container--card" *ngFor="let notice of notices.Data">
+
+    <mat-card class="card">
+
+      <mat-card-header class="mobile">
+        <mat-card-title> {{notice.title}}</mat-card-title>
+      </mat-card-header>
   
-</div> 
+      <div class="container--data">
+        <img mat-card-image src="{{notice.imageurl}}" alt="img from notice">
+        <div class="container--data__txt">
+          <mat-card-header class="desktop">
+            <mat-card-title> {{notice.title}}</mat-card-title>
+          </mat-card-header>
+          <p> {{notice.body}} </p>
+        </div>
+      </div>
+  
+      <mat-card-actions>
+        <!-- <button mat-raised-button color="primary">Like</button> -->
+        <a mat-button href="{{notice.url}}" color="primary" target="_blank">Leer más</a>
+      </mat-card-actions>
+
+    </mat-card>
+
+  </div>
+</div>
