@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./trending.component.scss" />
+    <title>Criptomonedas</title>
+  </head>
+  <body>
+    <div class="crypto-container">
+      <div class="crypto-list">
+        <h2>Top Criptomonedas</h2>
+        <ul>
+          <li *ngFor="let coin of cryptoTrending.coins">
+            <div class="crypto-item">
+              <img [src]="coin.item.thumb" alt="{{ coin.item.name }}" />
+              <div class="crypto-details">
+                <p>Name: {{ coin.item.name }}</p>
+                <p>Symbol: {{ coin.item.symbol }}</p>
+                <p>Market Cap Rank: {{ coin.item.market_cap_rank }}</p>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="nft-list">
+        <h2>NFTs</h2>
+        <ul>
+            <li *ngFor="let coin of cryptoTrending.nfts">
+            <div class="crypto-item">
+              <img src="{{ coin.thumb }}" alt="" />
+              <div class="crypto-details">
+                <p>Name: {{ coin.name }}</p>
+                <p>Symbol: {{ coin.native_currency_symbol }}</p>
+                <p>Floor Price Market: {{ coin.floor_price_in_native_currency }}</p>
+              </div>
+            </div>
+          </li> 
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>

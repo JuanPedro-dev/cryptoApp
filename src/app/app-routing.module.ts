@@ -4,32 +4,32 @@ import { LandingPageComponent } from '@modules/landing/components/landing-page/l
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'home',
     component: LandingPageComponent,
     loadChildren: () =>
-      import('./modules/landing/landing.module').then((m) => m.LandingModule),
+    import('./modules/landing/landing.module').then(m => m.LandingModule),
   },
   {
     path: 'auth',
     loadChildren: () =>
-      import('./modules/auth/auth.module').then((m) => m.AuthModule),
+      import('./modules/auth/auth.module').then(m => m.AuthModule),
   },
   {
-    path: 'main',
+    path: 'crypto',
     loadChildren: () =>
-      import('./modules/main/main.module').then((m) => m.MainModule),
+      import('./modules/crypto/crypto.module').then(m => m.CryptoModule),
   },
   {
-    path: 'price',
-    loadChildren: () =>
-      import('./modules/price/price.module').then((m) => m.PriceModule),
+    path: '',
+    redirectTo: 'home',
+    pathMatch: 'full'
   },
   {
     path: '**',
     loadChildren: () =>
       import('./modules/not-found/not-found.module').then(
         (m) => m.NotFoundModule
-      ),
+    ),
   },
 ];
 
