@@ -10,18 +10,18 @@ import { Subscription } from 'rxjs';
 })
 export class NewsComponent implements OnInit, OnDestroy {
 
+  // TODO: si hay ganas refactorizar, sacar subscribe deprecado... 
+  
   notices: News = {
-    Data: [] // Inicializa el arreglo de datos como vacío
+    Data: [] 
   };
-  
-  
+    
   private subscription: Subscription | undefined;
 
   constructor(private noticesCryptoService: noticesCriptoService) {}
 
   ngOnInit() {
     this.getNotices();
-    console.log('ENTROOOOOO');
   }
 
   getNotices() {

@@ -1,23 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noticias de Criptomonedas</title>
-  <link rel="stylesheet" href="news.component.scss"> <!-- Enlaza el archivo CSS -->
-</head>
-<body>  
-  <div class="container">
-    <h1>Noticias de Criptomonedas</h1>  
-    <div class="noticia" *ngFor="let notice of notices.Data">    
-      <img class="imagen" src="{{notice.imageurl}}" alt="Imagen de la noticia">
-      <h2 class="titulo">{{notice.title}}</h2>   
-      <p class="fuente">{{notice.source}}</p> 
-      <p>{{notice.body}}</p>     
-      <p>
-        <a href="{{notice.url}}" target="_blank">Leer más</a>
-      </p>
-    </div>
-  </div> 
-</body>
-</html>
+
+<div class="container">
+
+  <h1>Noticias de Criptomonedas</h1>  
+  <div class="noticia" *ngFor="let notice of notices.Data">    
+    <img class="imagen" src="{{notice.imageurl}}" alt="Imagen de la noticia">
+    <h2 class="titulo">{{notice.title}}</h2>   
+    <p class="fuente">{{notice.source}}</p> 
+    <p>{{notice.body}}</p>     
+    <p>
+      <a href="{{notice.url}}" target="_blank">Leer más</a>
+    </p>
+  </div>
+  
+</div> 

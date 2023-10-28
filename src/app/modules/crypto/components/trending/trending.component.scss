@@ -1,15 +1,10 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #333;
-    color: #fff;
-    margin: 0;
-    padding: 0;
-}
-
 .crypto-container {
     display: flex;
     justify-content: space-around;
     padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #333;
+    color: #fff;
 }
 
 .crypto-list, .nft-list {
@@ -44,14 +39,13 @@ img {
     height: 80px
 }
 
-/* Estilo para el nuevo contenedor que envuelve la imagen y el texto */
+
 .crypto-details {
-    margin-left: 10px; /* Espaciado entre la imagen y el texto */
+    margin-left: 10px; 
 }
 
-/* Estilo para la imagen */
 .crypto-item img {
     width: 80px;
     height: 80px;
-    margin-right: 10px; /* Espaciado entre la imagen y el texto */
+    margin-right: 10px; 
 }
