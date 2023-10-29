@@ -21,21 +21,47 @@ body {
   font-family: "Google Sans", Roboto, Arial, sans-serif;
 }
 
-.d-flex{
-  display: flex;
-}
+
+// Like Bootstrap
 
 .container-center{
   display: flex;
   justify-content: center;
   align-items: center;
+}
 
+.d-flex{
+  display: flex;
+}
+
+img{
+  max-width: 100%;
+}
+
+.m-2{
+  margin: 2rem;
 }
 
 .mb-2{
-  margin-bottom: 2rem;
+  margin-bottom: 2rem !important;
 }
 
 .mt-2{
   margin-top: 2rem;
+}
+
+.p-2{
+  padding: 2rem;
+}
+
+.text-center{
+  text-align: center;
+}
+
+.h2{
+  font-size: 3rem !important; 
+}
+
+.h3{
+  font-size: 2rem !important; 
 }
