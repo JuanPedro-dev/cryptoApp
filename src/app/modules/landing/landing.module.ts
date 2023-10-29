@@ -10,8 +10,10 @@ import { CryptoCardComponent } from './components/crypto-card/crypto-card.compon
 @NgModule({
     declarations: [
         LandingPageComponent,
+        CryptoCardComponent
     ],
     imports: [
+        CommonModule,
         LandingRoutingModule,
         SharedModule
     ]
