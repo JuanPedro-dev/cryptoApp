@@ -146,24 +146,23 @@
 	C301.6,205.6,305.6,213.6,305.6,221.6z" />
       </svg>
 
-      <!-- Separador -->
-      <span class="example-spacer"></span>
+      <span class="spacer"></span>
       <button mat-button routerLink="/crypto/converter">Convertidor</button>
       <button mat-button routerLink="/crypto/price">Criptomonedas</button>
       <button mat-button routerLink="/crypto/trending">Trending</button>
       <button mat-button routerLink="/crypto/news">Noticias</button>
       <button mat-button routerLink="/profile">Perfil</button>
 
-      <!-- Separador -->
-      <span class="example-spacer"></span>
-      <button mat-icon-button class="logout-icon" aria-label="Example icon-button with menu icon" (click)="logout()">
-            <mat-icon routerLink="/auth/login"> logout </mat-icon>
+      <span class="spacer"></span>
+      <button mat-icon-button class="logout-icon" routerLink="/" (click)="logout()">
+            <mat-icon> logout </mat-icon>
       </button>
 
 </mat-toolbar>
 
 
 <mat-toolbar color="primary" class="mobile ">
+      
       <svg routerLink="/" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
             viewBox="0 0 502.4 502.4" xml:space="preserve">
             <path style="fill:#DBAB56;" d="M251.2,502.4c-134.4,0-244-109.6-244-244s109.6-244,244-244s244,109.6,244,244
@@ -310,7 +309,8 @@ s5.6,12,12,12H220V388c0,6.4,5.6,12,12,12s12-5.6,12-12v-26.4h10.4V388c0,6.4,5.6,1
 c28-0.8,50.4-24,50.4-52.8v-1.6c0-16.8-8-32-20-41.6c12-9.6,20-24.8,20-41.6v-1.6c0-15.2-6.4-28.8-16.8-38.4L295.2,200
 C301.6,205.6,305.6,213.6,305.6,221.6z" />
       </svg>
-      <span class="example-spacer"></span>
+
+      <span class="spacer"></span>
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
             <mat-icon>menu</mat-icon>
       </button>
@@ -331,7 +331,7 @@ C301.6,205.6,305.6,213.6,305.6,221.6z" />
                   <span mat-button routerLink="/profile">Perfil</span>
             </button>
             <button mat-menu-item>
-                  <span mat-button routerLink="/auth/login">Cerrar Sesión</span>
+                  <span mat-button routerLink="/" (click)="logout()">Cerrar Sesión</span>
             </button>
       </mat-menu>
 </mat-toolbar>

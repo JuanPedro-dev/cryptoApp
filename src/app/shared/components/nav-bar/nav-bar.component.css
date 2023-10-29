@@ -1,45 +1,22 @@
-body {
-  margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
+.spacer {
+  flex: 1 1 auto;
 }
 
-a{
-  cursor: pointer;
+svg {
+  height: 2rem;
+  fill: white;
 }
 
-.navbar {
-  background-color: #333;
-  color: #fff;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  font-family: "Roboto", sans-serif;
+.desktop {
+  display: none;
 }
 
-.logo a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  font-size: 24px;
-}
+@media screen and (min-width: 720px) {
+  .mobile {
+    display: none;
+  }
 
-.nav-links {
-  list-style: none;
-  display: flex;
-}
-
-.nav-links li {
-  margin-right: 20px;
-}
-
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-}
-
-.nav-links a:hover {
-  border-bottom: 2px solid #fff;
+  .desktop {
+    display: flex;
+  }
 }
