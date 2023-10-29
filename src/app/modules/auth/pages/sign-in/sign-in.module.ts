@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { SignInRoutingModule } from './sign-in-routing.module';
 import { SignInComponent } from './sign-in.component';
 
+import { SharedModule } from '@shared/shared.module';
 
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
@@ -12,15 +13,17 @@ import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
 
+
 @NgModule({
   declarations: [
-    SignInComponent
+    SignInComponent,
   ],
   imports: [
     CommonModule,
     SignInRoutingModule,
     ReactiveFormsModule,
     MatFormFieldModule, MatInputModule, MatIconModule, MatSnackBarModule, MatButtonModule,
+    SharedModule
   ]
 })
 export class SignInModule { }
