@@ -7,7 +7,7 @@
   <div class="mat-elevation-z8 container--table example-table-container">
     <table mat-table [dataSource]="dataSource" matSort>
 
-      <tr mat-header-row *matHeaderRowDef="displayedColumns" class="table--header"></tr>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns, sticky:true" class="table--header"></tr>
       <tr mat-row *matRowDef="let row; columns: displayedColumns;" class="table--row"></tr>
 
       <ng-container matColumnDef="market_cap_rank">

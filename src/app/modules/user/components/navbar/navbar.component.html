@@ -148,11 +148,9 @@
 
       <!-- Separador -->
       <span class="example-spacer"></span>
-      <button mat-button routerLink="/crypto/converter">Convertidor</button>
-      <button mat-button routerLink="/crypto/price">Criptomonedas</button>
-      <button mat-button routerLink="/crypto/trending">Trending</button>
-      <button mat-button routerLink="/crypto/news">Noticias</button>
-      <button mat-button routerLink="/profile">Perfil</button>
+      <button mat-button routerLink="/">Home</button>
+      <button mat-button routerLink="/users">Dashboard</button>
+
 
       <!-- Separador -->
       <span class="example-spacer"></span>
@@ -314,26 +312,19 @@ C301.6,205.6,305.6,213.6,305.6,221.6z" />
       <button mat-icon-button [matMenuTriggerFor]="menu" aria-label="Example icon-button with a menu">
             <mat-icon>menu</mat-icon>
       </button>
+
       <mat-menu #menu="matMenu">
             <button mat-menu-item>
-                  <span mat-button routerLink="/crypto/converter">Convertidor</span>
+                  <span mat-button routerLink="/">Home</span>
             </button>
             <button mat-menu-item>
-                  <span mat-button routerLink="/crypto/price">Criptomonedas</span>
-            </button>
-            <button mat-menu-item>
-                  <span mat-button routerLink="/crypto/trending">Trending</span>
-            </button>
-            <button mat-menu-item>
-                  <span mat-button routerLink="/crypto/news">Noticias</span>
-            </button>
-            <button mat-menu-item>
-                  <span mat-button routerLink="/profile">Perfil</span>
+                  <span mat-button routerLink="/users">Dashboard</span>
             </button>
             <button mat-menu-item>
                   <span mat-button routerLink="/auth/login">Cerrar Sesión</span>
             </button>
       </mat-menu>
+
 </mat-toolbar>
 
 

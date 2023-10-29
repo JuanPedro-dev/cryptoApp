@@ -9,7 +9,7 @@ import {
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Router } from '@angular/router';
 import { MyErrorStateMatcher } from '../../interface/auth';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../../core/services/user.service';
 import { User } from '../../interface/user';
 import { Observable, Subscription, catchError, map, of } from 'rxjs';
 import { AuthService } from '@core/services/auth.service';

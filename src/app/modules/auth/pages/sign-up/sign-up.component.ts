@@ -10,7 +10,7 @@ import { Router } from '@angular/router';
 import { MyErrorStateMatcher } from '../../interface/auth';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
-import { UserService } from '../../services/user.service';
+import { UserService } from '../../../../core/services/user.service';
 import { User } from '../../interface/user';
 import { Subscription } from 'rxjs';
 
