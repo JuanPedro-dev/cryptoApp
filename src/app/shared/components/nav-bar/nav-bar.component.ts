@@ -7,15 +7,9 @@ import { AuthService } from '@core/services/auth.service';
   templateUrl: './nav-bar.component.html',
   styleUrls: ['./nav-bar.component.css']
 })
-export class NavBarComponent implements OnInit{
+export class NavBarComponent {
   private router: Router = inject(Router);
   private authService: AuthService = inject(AuthService);
-
-  @Input() isLoggedIn: Boolean = false;
-
-  ngOnInit(): void {
-    this.isLoggedIn = this.authService.isLogged();
-  }
   
   public goToLogin(){
     this.router.navigate(["/auth/login"]);

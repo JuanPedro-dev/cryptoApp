@@ -3,19 +3,21 @@ import { CommonModule } from '@angular/common';
 
 import { ManagerRoutingModule } from './manager-routing.module';
 import { ManagerComponent } from './manager.component';
-import { NavbarComponent } from '../components/navbar/navbar.component';
+
 import { MaterialModule } from '../../../shared/components/material/material.module';
+import { CryptoPageModule } from '@modules/crypto/pages/crypto-page/crypto-page.module';
 
 
 @NgModule({
   declarations: [
     ManagerComponent,
-    NavbarComponent
+
   ],
   imports: [
     CommonModule,
     ManagerRoutingModule,
-    MaterialModule
+    MaterialModule,
+    CryptoPageModule
   ]
 })
 export class ManagerModule { }

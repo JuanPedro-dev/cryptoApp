@@ -18,14 +18,9 @@ const routes: Routes = [
           import('../components/user-dashboard/user-manager.module').then(m=> m.UserManagerModule),
       },
       {
-        path: 'edit',
+        path: 'profile',
         loadChildren: () =>
           import('../components/user-profile/user.module').then(m=> m.UserModule),
-      },
-      {
-        path: 'view',
-        loadChildren: () =>
-          import('../components/user-dashboard/user-manager.module').then(m=> m.UserManagerModule),
       },
     ]
   },

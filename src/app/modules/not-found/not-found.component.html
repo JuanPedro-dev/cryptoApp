@@ -1,4 +1,6 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar *ngIf="!isLoggedIn"></app-nav-bar>
+
+<crypto-navbar *ngIf="isLoggedIn"></crypto-navbar>
 
 <div class="not-found-container">
   <img

@@ -19,18 +19,19 @@ const routes: Routes = [
     path: 'crypto',
     loadChildren: () =>
       import('./modules/crypto/crypto.module').then((m) => m.CryptoModule),
-    // TODO: activar guard en prod
-    // canActivate:[authGuard]
+    canActivate: [authGuard],
+  },
+  {
+    path: 'users',
+    loadChildren: () =>
+    import('./modules/user/Page/manager.module').then((m) => m.ManagerModule),
+    canActivate:[authGuard]
   },
   {
     path: '',
     redirectTo: 'home',
     pathMatch: 'full',
   },
-  { path: 'users', loadChildren: () => import('./modules/user/Page/manager.module').then(m => m.ManagerModule) },
-    // TODO: activar guard en prod
-    // TODO: Agregar Guard si es administrador (crear un user admin)
-    // canActivate:[authGuard]
   {
     path: '**',
     loadChildren: () =>

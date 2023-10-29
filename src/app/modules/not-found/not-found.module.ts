@@ -6,6 +6,7 @@ import { NotFoundComponent } from './not-found.component';
 import { NavBarComponent } from '@shared/components/nav-bar/nav-bar.component';
 import { SharedModule } from '@shared/shared.module';
 import { MaterialModule } from '@shared/components/material/material.module';
+import { CryptoPageModule } from '@modules/crypto/pages/crypto-page/crypto-page.module';
 
 
 @NgModule({
@@ -16,7 +17,8 @@ import { MaterialModule } from '@shared/components/material/material.module';
     CommonModule,
     NotFoundRoutingModule,
     SharedModule,
-    MaterialModule
+    MaterialModule,
+    CryptoPageModule
   ]
 })
 export class NotFoundModule { }

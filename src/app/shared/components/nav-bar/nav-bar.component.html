@@ -148,14 +148,12 @@ C301.6,205.6,305.6,213.6,305.6,221.6z" />
 
       <span class="spacer"></span>
       <button mat-button routerLink="/">Home</button>
-      <button *ngIf="!isLoggedIn" mat-button routerLink="/auth/sign-in">Iniciar Sesión</button>
-      <button *ngIf="!isLoggedIn" mat-button routerLink="/auth/sign-up">Registrarse</button>
-      <button *ngIf="isLoggedIn" mat-button routerLink="/crypto/news">Noticias</button>
-      <button *ngIf="isLoggedIn" mat-button routerLink="/profile">Perfil</button>
+      <button mat-button routerLink="/auth/sign-in">Iniciar Sesión</button>
+      <button mat-button routerLink="/auth/sign-up">Registrarse</button>
 
       <span class="spacer"></span>
       <button mat-icon-button class="logout-icon">
-            <mat-icon *ngIf="isLoggedIn" routerLink="/" (click)="logout()"> logout </mat-icon>
+            <mat-icon routerLink="/" (click)="logout()"> logout </mat-icon>
       </button>
 
 </mat-toolbar>
@@ -323,14 +321,14 @@ C301.6,205.6,305.6,213.6,305.6,221.6z" />
             <button mat-menu-item>
                   <span mat-button routerLink="/">Home</span>
             </button>
-            <button mat-menu-item *ngIf="!isLoggedIn">
+            <button mat-menu-item>
                   <span mat-button routerLink="/auth/sign-in">Iniciar Sesión</span>
             </button>
-            <button mat-menu-item *ngIf="!isLoggedIn">
+            <button mat-menu-item>
                   <span mat-button routerLink="/">Registrarse</span>
             </button>
 
-            <button *ngIf="isLoggedIn" mat-menu-item>
+            <button mat-menu-item>
                   <span mat-button routerLink="/" (click)="logout()">Cerrar Sesión</span>
             </button>
       </mat-menu>

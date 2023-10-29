@@ -1,9 +1,7 @@
-
-
 <div class="container">
   <mat-form-field>
     <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. Mia" #input>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. john Doe" #input>
   </mat-form-field>
 
   <div class="mat-elevation-z8 container--table example-table-container">
@@ -31,9 +29,8 @@
       <ng-container matColumnDef="edit">
         <th mat-header-cell *matHeaderCellDef> </th>
         <td mat-cell *matCellDef="let element" style="text-align: right;">
-          <a style="cursor: pointer;"> <mat-icon color="primary" matTooltip="view"> search</mat-icon> </a>
-          <a style="cursor: pointer;"> <mat-icon color="primary" matTooltip="edit"> edit</mat-icon> </a>
-          <a style="cursor: pointer;"> <mat-icon color="warn" matTooltip="delete" (click)="deleteUser(element.id)"> delete</mat-icon> </a>
+          <a style="cursor: pointer;"> <mat-icon color="primary" matTooltip="edit">edit</mat-icon> </a>
+          <a style="cursor: pointer;"> <mat-icon color="warn" matTooltip="delete" (click)="deleteUser(element.id)">delete</mat-icon> </a>
         </td>
       </ng-container>
 

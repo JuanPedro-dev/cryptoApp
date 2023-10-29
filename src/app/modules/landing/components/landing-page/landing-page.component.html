@@ -1,4 +1,6 @@
-<app-nav-bar></app-nav-bar>
+<app-nav-bar *ngIf="!isLoggedIn"></app-nav-bar>
+
+<crypto-navbar *ngIf="isLoggedIn"></crypto-navbar>
 
 <div class="container">
 
@@ -6,7 +8,7 @@
     <div class="hero--info text-center">
       <h1 class="h2 mb-2">Tu lugar favorito</h1>
       <h3 class="h3 mb-2">para invertir en criptomonedas</h3>
-      <button mat-raised-button color="primary">Servicios</button>
+      <button mat-raised-button routerLink="/crypto/price" color="primary">Servicios</button>
     </div>
   </section>
 
@@ -89,8 +91,9 @@
 
       <h4 for="mensaje">Información adicional*</h4>
       <input type="text" placeholder="Escribe tu mensaje" required />
+      <p *ngIf="show"> Gracias Por Contactarse!!!</p>
 
-      <button mat-raised-button color="primary">Enviar</button>
+      <button mat-raised-button color="primary" (click)="show=true">Enviar</button>
     </form>
   </section>
 
