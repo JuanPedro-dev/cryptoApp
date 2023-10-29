@@ -1,8 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
-import { CryptoRoutingModule } from './crypto-routing.module';
-
+import { UserRoutingModule } from './user-routing.module';
 
 
 @NgModule({
@@ -10,7 +9,10 @@ import { CryptoRoutingModule } from './crypto-routing.module';
   ],
   imports: [
     CommonModule,
-    CryptoRoutingModule,
+    UserRoutingModule,
+    
+  ],
+  exports: [
   ]
 })
-export class CryptoModule { }
+export class UserModule { }
