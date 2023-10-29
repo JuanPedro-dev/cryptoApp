@@ -1,178 +1,217 @@
-/* Estilos globales */
+.home {
+  display: flex;
+  flex-direction: column;
+}
+
+.section {
+  padding: 40px;
+  color: #fff;
+  border-radius: 0.2rem;
+  height: 400px;
+  font-family: "Roboto", sans-serif;
+}
+
+.section h1 {
+  font-size: 50px;
+  font-weight: bolder;
+  line-height: 76px;
+  color: #3e4449;
+}
+
+.section h2 {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.75) !important;
+}
+
+hr {
+  height: 0.2rem;
+  max-width: 3.25rem;
+  margin: 1.5rem auto;
+  background-color: #f4623a;
+  opacity: 1;
+  border: none;
+  border-radius: 0.2rem;
+}
+
+.section1 {
+  background-color: #4f433a;
+}
+
+.section1 {
+  background: url('https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/03/290655-apple-lanzaria-nuevo-macbook-air-mas-barato-potente.jpg?itok=ySWhq6Us')center/cover;
+  background-repeat: no-repeat;
+  background-size: 100%;
+  height: 100vh;
+  box-shadow: inset 180px 120px 250px #000000, inset 204px 0px 250px #000000;
+}
+
+.section1 .content button {
+  margin-top: 1.5rem;
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+}
+
+.section1 .content a {
+  text-decoration: none;
+  color: #161616;
+}
+
+.section2 {
+  background-color: #181d22;
+  height: 50%;
+}
+
+.section2 .content{
+  flex-direction: row;
+}
+
 body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
-  color: #333;
 }
 
-/* Encabezado */
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 20px 0;
-}
-
-nav {
+.crypto-card {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  padding: 0 20px;
+  background-color: #00000080;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 10px;
 }
 
-.nav-links {
-  list-style: none;
-  display: flex;
+.avatar img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin-right: 10px;
 }
 
-.nav-links li {
-  margin-right: 20px;
+.crypto-info {
+  flex: 1;
 }
 
-.nav-links a {
-  text-decoration: none;
-  color: #fff;
-  font-weight: bold;
-  transition: color 0.3s;
-}
-
-.nav-links a:hover {
-  color: #ff5733;
-}
-
-/* Hero */
-.hero {
-  text-align: center;
-  padding: 80px 0;
-}
-
-.hero h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-bottom: 40px;
-}
-
-.cta-button {
+.chart {
+  width: 10px;
+  height: 10px;
+  background-color: green;
+  border-radius: 50%;
   display: inline-block;
-  padding: 15px 30px;
-  background-color: #ff5733;
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 5px;
-  transition: background-color 0.3s;
+  margin-top: 5px;
 }
 
-.cta-button:hover {
-  background-color: #ff341a;
+.section3 {
+  background-color: #ff681f;
 }
 
-/* Características */
-.features {
-  text-align: center;
-  padding: 40px 0;
-  background-color: #fff;
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  height: 100%;
+  width: 100%;
 }
 
-.features h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+.image-grid img {
+  object-fit: cover;
+  height: 50vh;
+  width: 100%;
+  border-radius: 3px;
 }
 
-.feature {
-  margin-bottom: 40px;
+.section4 {
+  background-color: #f04b1b;
 }
 
-.feature img {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
+.service4 {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
 
-.feature h4 {
-  font-size: 20px;
-  margin-bottom: 10px;
+.section4 .content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Descarga */
-.download {
-  text-align: center;
-  padding: 60px 0;
-  background-color: #333;
+.section4 .content h1{
   color: #fff;
 }
 
-.download h3 {
-  font-size: 28px;
-  margin-bottom: 20px;
+.section5 {
+  background-color: #73757C;
 }
 
-.download p {
-  font-size: 18px;
-  margin-bottom: 40px;
+.section5 .formulario {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-/* Contacto */
-.contact {
+.section5 .formulario button {
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 10rem;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.section5 input {
+  outline: none;
+  border: 1px solid #39c;
+  text-align: left;
+  border-radius: 10px;
+  padding: 5px;
+  width: 390px;
+  margin: 5px 0 5px 0;
+}
+
+.section5 .content h1{
+  color: #fff;
+}
+
+.section6 {
+  background-color: #73757C;
+  height: 1.2rem;
+}
+
+.section6 .content{
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+
+.content {
   text-align: center;
-  padding: 40px 0;
-  background-color: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+  justify-content: center;
 }
 
-.contact h3 {
-  font-size: 24px;
-  margin-bottom: 20px;
+h1 {
+  font-size: 2rem;
 }
 
-.contact p {
-  font-size: 18px;
-  margin-bottom: 20px;
+p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+  color: #b5bbc0;
 }
 
-
-/* Media queries para dispositivos móviles */
-@media (max-width: 768px) {
-
-  .hero h2 {
-      font-size: 28px;
-  }
-
-  .hero p {
-      font-size: 16px;
-  }
-
-  .cta-button {
-      padding: 10px 20px;
-      font-size: 16px;
-  }
-
-  .feature img {
-      width: 60px;
-      height: 60px;
-  }
-
-  .feature h4 {
-      font-size: 16px;
-  }
-
-  .download h3 {
-      font-size: 24px;
-  }
-
-  .download p {
-      font-size: 16px;
-  }
-
-  .contact h3 {
-      font-size: 20px;
-  }
-
-  .contact p {
-      font-size: 16px;
-  }
+button {
+  height: 60px;
+  width: 160px;
 }
