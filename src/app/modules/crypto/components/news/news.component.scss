@@ -1,0 +1,87 @@
+.container {
+  font-family: Arial, sans-serif;
+  margin: 0 auto;
+  padding: 2rem;
+  
+  .mobile{
+    display: block;
+    text-align: center;
+  }
+
+  .desktop{
+    display: none;
+  }
+
+  @media screen and (min-width: 600px) {
+    & {
+      max-width: 80%;
+    }
+
+    .mobile{
+      display: none;
+    }
+
+    .desktop{
+      display: block;
+    }
+
+    .container--data__txt{
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+  }
+}
+
+h1{
+  color: white;
+  text-align: center;
+}
+
+.card {
+  margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  padding-inline: 1rem;
+}
+
+.container--data{
+  margin: 1rem 0;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1rem;
+
+  & img[mat-card-image]{
+    margin-left: 1rem;
+    max-width: 250px;
+    border-radius: 10px;
+    overflow: hidden;
+    flex: 1 1 100px;
+    aspect-ratio: 1/1;
+  }
+
+  & .container--data__txt {
+    flex: 1 1 250px;
+    font-size: medium;
+  }
+}
+
+.container--card{
+  background: rgba(245, 245, 245, 0.732);
+  border-radius: 1rem;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+}
+
+mat-card-actions{
+  display: flex;
+  justify-content: space-around;
+}
+
+.mat-mdc-card-content:last-child{
+  padding-bottom: 0;
+}
+

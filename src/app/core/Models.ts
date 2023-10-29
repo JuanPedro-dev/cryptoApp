@@ -1,3 +1,5 @@
+// TODO: Borrar si no se usa
+
 import { IUser } from './Interfaces';
 
 export class User implements IUser {

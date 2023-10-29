@@ -1,0 +1,1010 @@
+
+{
+    "Type": 100,
+    "Message": "News list successfully returned",
+    "Promoted": [],
+    "Data": [
+        {
+            "id": "19514702",
+            "guid": "https://es.cointelegraph.com/news/crypto-biz-blockfi-emerges-bankruptcy-worldcoin-halts-usdc-payments",
+            "published_on": 1698511800,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19514702.jpeg",
+            "title": "Crypto Biz: BlockFi sale de la quiebra, Worldcoin suspende pagos en USDC y mucho más",
+            "url": "https://es.cointelegraph.com/news/crypto-biz-blockfi-emerges-bankruptcy-worldcoin-halts-usdc-payments",
+            "body": "El Crypto Biz de esta semana analiza la salida de BlockFi de la bancarrota, los avances del ETF de Bitcoin de BlackRock, las mejoras en el esquema de pagos a operadores de Worldcoin y mucho más",
+            "tags": "ETF|Ledger|Wallet",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC|WALLET",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19511767",
+            "guid": "https://es.cointelegraph.com/news/euphoria-and-bitcoin-the-importance-of-managing-risk-and-emotion",
+            "published_on": 1698506340,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19511767.jpeg",
+            "title": "Euforia y Bitcoin: La importancia de gestionar el riesgo y la emoción",
+            "url": "https://es.cointelegraph.com/news/euphoria-and-bitcoin-the-importance-of-managing-risk-and-emotion",
+            "body": "Invertir en Bitcoin requiere una estrategia que te guíe, te ayude a lograr tus metas y te proteja de los riesgos. No es un juego de azar.",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19510798",
+            "guid": "https://www.diariobitcoin.com/?p=165212",
+            "published_on": 1698504995,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Pepe regresa con fuerza luego de un crecimiento del 96% y NuggetRush está en fase de preventa",
+            "url": "https://www.diariobitcoin.com/articulos-patrocinados/pepe-regresa-con-fuerza-luego-de-un-crecimiento-del-96-y-nuggetrush-esta-en-fase-de-preventa/",
+            "body": "A continuación, el equipo de NuggetRush presenta algunas consideraciones sobre el aumento visto en el precio de la memecoin PEPE, y aprovecha el espacio para invitar a los interesados a la preventa del token NUGX.",
+            "tags": "Artículos patrocinados",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19509617",
+            "guid": "https://www.diariobitcoin.com/?p=165208",
+            "published_on": 1698502710,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "FTX: Sam Bankman-Fried rechazó solicitudes de apoyo de Genesis Global y Celsius",
+            "url": "https://www.diariobitcoin.com/gente-cripto/ftx-sam-bankman-fried-rechazo-solicitudes-de-apoyo-de-genesis-global-y-celsius/",
+            "body": "El antiguo CEO de FTX informó que recibió solicitudes de apoyo por parte de Genesis y Celsius, entidades que se vieron fuertemente afectadas tras el colapso del mercado a mediados de 2022. También reveló que fue uno de los inversores tempranos de Solana.",
+            "tags": "Exchanges|Gente cripto",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "SOL",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19508869",
+            "guid": "https://es.cointelegraph.com/news/bitcoin-is-a-new-bullish-cycle-beginning",
+            "published_on": 1698500880,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19508869.jpeg",
+            "title": "Bitcoin: ¿Comienza un nuevo ciclo alcista?",
+            "url": "https://es.cointelegraph.com/news/bitcoin-is-a-new-bullish-cycle-beginning",
+            "body": "El resurgimiento de Bitcoin: Su cotización supera la marca de los USD 34,000 por primera vez desde mayo de 2022",
+            "tags": "Bitcoin|Bitcoin Price|CryptoMarket|Cryptocurrencies|Bitcoin Analysis|Price Analysis|Bitcoin Halving|Criptonoticias|Criptotendencia",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19504179",
+            "guid": "https://es.cointelegraph.com/news/after-an-explosive-rise-of-20-analysts-assess-whether-bitcoin-will-fall-to-us30-000-or-rise-to-us40-000",
+            "published_on": 1698492660,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19504179.jpeg",
+            "title": "Después de un aumento explosivo del 20%, analistas evalúan si Bitcoin caerá a USD 30,000 o subirá a USD 40,000",
+            "url": "https://es.cointelegraph.com/news/after-an-explosive-rise-of-20-analysts-assess-whether-bitcoin-will-fall-to-us30-000-or-rise-to-us40-000",
+            "body": "Analistas están de acuerdo en que después de la fuerte subida, Bitcoin se encuentra en un nivel de soporte crucial",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19503975",
+            "guid": "https://es.cointelegraph.com/news/experts-point-out-that-the-lack-of-privacy-is-the-main-problem-with-drex-the-new-currency-of-the-central-bank-of-brazil",
+            "published_on": 1698492540,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19503975.jpeg",
+            "title": "Especialistas señalan que la falta de privacidad es el principal problema de Drex, la nueva moneda del Banco Central de Brasil",
+            "url": "https://es.cointelegraph.com/news/experts-point-out-that-the-lack-of-privacy-is-the-main-problem-with-drex-the-new-currency-of-the-central-bank-of-brazil",
+            "body": "Especialistas señalan que la falta de privacidad es el principal punto de atención de Drex, la nueva moneda del Banco Central de Brasil",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19503786",
+            "guid": "https://es.cointelegraph.com/news/vaneck-predicts-a-10-600-solana-price-rally-by-2030",
+            "published_on": 1698492180,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19503786.jpeg",
+            "title": "VanEck predice un aumento del precio de Solana del 10,600% para 2030",
+            "url": "https://es.cointelegraph.com/news/vaneck-predicts-a-10-600-solana-price-rally-by-2030",
+            "body": "El informe también explora un escenario potencial en el que Solana se convierte en la primera blockchain en alojar aplicaciones con más de 100 millones de usuarios",
+            "tags": "Solana|Predictions|Price Analysis",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "SOL|BLOCKCHAIN",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19503784",
+            "guid": "https://es.cointelegraph.com/news/ripple-clo-and-xrp-community-back-sec-commissioner-lbry-lawsuit-dissent",
+            "published_on": 1698491940,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19503784.jpeg",
+            "title": "Ejecutivo de Ripple y comunidad de XRP respaldan la disidencia de la comisionada de la SEC en la demanda de LBRY",
+            "url": "https://es.cointelegraph.com/news/ripple-clo-and-xrp-community-back-sec-commissioner-lbry-lawsuit-dissent",
+            "body": "Stuart Alderoty agradeció a Hester Peirce y sugirió que podría ser el momento de presentar un informe amicus",
+            "tags": "SEC|LBRY|XRP|Ripple",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "XRP|REGULATION",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19494251",
+            "guid": "https://es.cointelegraph.com/news/google-to-invest-another-two-billion-in-ai-firm-anthropic",
+            "published_on": 1698476400,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19494251.jpeg",
+            "title": "Google invertirá otros USD 2,000 millones en Anthropic",
+            "url": "https://es.cointelegraph.com/news/google-to-invest-another-two-billion-in-ai-firm-anthropic",
+            "body": "Google ya ha invertido USD 500 millones como parte del acuerdo, mientras que los USD 1,500 millones pendientes se pagarán a lo largo del tiempo, según el Wall Street Journal",
+            "tags": "Anthropic|Claude|Funding|Investment|Dario Amodei|Daniela Amodei|Sam Altman|FTX Bankruptcy|FTX Creditors",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19486091",
+            "guid": "https://es.cointelegraph.com/news/wall-street-journal-corrects-article-misciting-hamas-crypto-terrorism-funding-data",
+            "published_on": 1698463200,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19486091.jpeg",
+            "title": "WSJ corrige artículo donde citaba erróneamente datos de financiación de Hamás",
+            "url": "https://es.cointelegraph.com/news/wall-street-journal-corrects-article-misciting-hamas-crypto-terrorism-funding-data",
+            "body": "Elliptic, la empresa de la que el Wall Street Journal obtuvo los datos, se mostró \"satisfecha\" de que el medio de comunicación reconociera sus errores",
+            "tags": "Israel-Palestine Conflict|Terrorism Funding|Wall Street Journal|Elliptic|Blockchain Data|Palestinian Islamic Jihad|Hezbollah|Mainstream Media",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19477311",
+            "guid": "https://www.diariobitcoin.com/?p=165204",
+            "published_on": 1698448463,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Snapdragon X Elite vs Apple M2: ¿Un punto de inflexión para las PC?”",
+            "url": "https://www.diariobitcoin.com/tecnologia/snapdragon-x-elite-vs-apple-m2-un-punto-de-inflexion-para-las-pc/",
+            "body": "Descubre cómo el nuevo chip Snapdragon X Elite de Qualcomm podría transformar el mercado de laptops, poniendo en jaque a titanes como Apple, Intel y AMD.",
+            "tags": "Hardware|IA|Tecnología",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19475836",
+            "guid": "https://www.diariobitcoin.com/?p=165201",
+            "published_on": 1698446116,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Hester Peirce, comisionada de la SEC, cuestionó enfoque regulatorio en el caso LBRY",
+            "url": "https://www.diariobitcoin.com/negocios/regulacion/hester-peirce-criticas-contra-sec-lbry/",
+            "body": "La funcionaria compartió algunas reflexiones sobre el caso, criticando las duras acciones de la SEC contra LBRY a pesar de que este proyecto operó con total transparencia. Señaló que para las empresas cripto es imposible registrar la venta de sus tokens bajo las leyes vigentes.",
+            "tags": "Estados Unidos|Regulación|Startups",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "REGULATION|ICO",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19474343",
+            "guid": "https://es.cointelegraph.com/news/hester-peirce-lbry-enforcement-action-troubling",
+            "published_on": 1698443280,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19474343.jpeg",
+            "title": "Hester Peirce se pronuncia en contra de la acción de cumplimiento contra LBRY: \"el mercado podría haber decidido\"",
+            "url": "https://es.cointelegraph.com/news/hester-peirce-lbry-enforcement-action-troubling",
+            "body": "La comisionada de la SEC dijo que las acciones del regulador \"obligaron a un grupo de emprendedores a abandonar lo que habían construido\", y LBRY anunció en octubre que planeaba cerrar sus operaciones",
+            "tags": "regulation|united states|government|sec|lbry",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "REGULATION",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19473056",
+            "guid": "https://es.cointelegraph.com/news/cvm-promises-closer-ties-with-cryptocurrency-companies-that-work-with-securities",
+            "published_on": 1698441000,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19473056.jpeg",
+            "title": "La CVM de Brasil promete acercarse a las empresas de criptomonedas que operan con valores mobiliarios",
+            "url": "https://es.cointelegraph.com/news/cvm-promises-closer-ties-with-cryptocurrency-companies-that-work-with-securities",
+            "body": "La autoridad federal informa que abrirá un canal de comunicación para conocer la estructura y características de las empresas cripto que operan en el mercado de capitales",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19472524",
+            "guid": "https://www.diariobitcoin.com/?p=165197",
+            "published_on": 1698440488,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Colombia: “Tendremos una moneda digital, pero emisor primario será el Banco Central”, asegura ministro de Hacienda",
+            "url": "https://www.diariobitcoin.com/paises/sur-america/colombia/colombia-tendremos-una-moneda-digital-pero-emisor-primario-sera-el-banco-central-asegura-ministro-de-hacienda/",
+            "body": "Tras reiterar que trabajan en una ley para las criptomonedas, el ministro también compartió algunos señalamientos sobre la posibilidad que Colombia emita su propia moneda digital, asegurando que esa responsabilidad será del Banco de la República.",
+            "tags": "CBDC|Colombia",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19472110",
+            "guid": "https://es.cointelegraph.com/news/kraken-suspend-trading-usdt-dai-wbtc-weth-and-waxl-stablecoin-canada",
+            "published_on": 1698439560,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19472110.jpeg",
+            "title": "Kraken suspenderá el trading de USDT, DAI, WBTC, WETH y WAXL en Canadá",
+            "url": "https://es.cointelegraph.com/news/kraken-suspend-trading-usdt-dai-wbtc-weth-and-waxl-stablecoin-canada",
+            "body": "Según los correos electrónicos enviados a los clientes, los cambios entrarán en vigencia a partir del 30 de noviembre",
+            "tags": "Cryptocurrencies|Cryptocurrency Exchange|Kraken|Canada",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "TRADING|USDT",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19471925",
+            "guid": "https://es.cointelegraph.com/news/gemini-sues-genesis-over-gbtc-shares-used-earn-collateral",
+            "published_on": 1698439080,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19471925.jpeg",
+            "title": "Gemini demanda a Genesis por las acciones de GBTC utilizadas como garantía en Earn, que ahora valen USD 1,600 millones",
+            "url": "https://es.cointelegraph.com/news/gemini-sues-genesis-over-gbtc-shares-used-earn-collateral",
+            "body": "Según la demanda, Genesis desea utilizar el valor inicial de las acciones en sus reclamaciones y no está liberando el colateral adicional transferido por DCG",
+            "tags": "Digital Currency Group|Gemini|Winklevoss Twins|Fraud|Bankruptcy",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19471926",
+            "guid": "https://es.cointelegraph.com/news/op-crypto-news-of-the-week-ibtc-from-blackrock-appeared-and-disappeared-on-dtcc-prosecutor-sues-gemini-genesis-and",
+            "published_on": 1698439080,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19471926.jpeg",
+            "title": "Top criptonoticias de la semana: IBTC de BlackRock: Apareció y desapareció en DTCC, Fiscal demanda a Gemini, Genesis y DGC, Caso SBF: Fiscalía rechaza el “altruismo efectivo” y más",
+            "url": "https://es.cointelegraph.com/news/op-crypto-news-of-the-week-ibtc-from-blackrock-appeared-and-disappeared-on-dtcc-prosecutor-sues-gemini-genesis-and",
+            "body": "¿Cuáles han sido las criptonoticias más populares de esta semana? Hagamos un repaso detallado de lo ocurrido para no perdernos de nada. ¿Qué pasó con bitcoin, blockchain y el ecosistema cripto durante los últimos siete días?",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BLOCKCHAIN|BTC",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19470896",
+            "guid": "https://es.cointelegraph.com/news/9-protocols-criticize-layerzero-wsteth-token-claiming-proprietary",
+            "published_on": 1698437700,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19470896.jpeg",
+            "title": "9 protocolos critican el token 'wstETH' de LayerZero",
+            "url": "https://es.cointelegraph.com/news/9-protocols-criticize-layerzero-wsteth-token-claiming-proprietary",
+            "body": "Connext, Chainsafe, Sygma, LiFi, Socket, Hashi, Across, Celer y Router emitieron una declaración conjunta criticando el nuevo token",
+            "tags": "wsteth|eth|steth|lido|lidodao|layerzero|connext|li.fi",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "ICO|ETH",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19470565",
+            "guid": "https://www.diariobitcoin.com/?p=165193",
+            "published_on": 1698437202,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Gemini presenta nueva demanda legal contra Genesis por acciones de Grayscale",
+            "url": "https://www.diariobitcoin.com/mercados/exchanges/gemini-nueva-demanda-genesis/",
+            "body": "De acuerdo con Gemini, Genesis había prometido como garantía unos 60 millones de acciones del Grayscale Bitcoin Trust (GBTC), las cuales necesita para indemnizar a los afectados tras el cierre del programa Earn.",
+            "tags": "Exchanges",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC|REGULATION",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19471769",
+            "guid": "https://es.cointelegraph.com/news/price-analysis-10-27-btc-eth-bnb-xrp-sol-ada-doge-ton-link-matic",
+            "published_on": 1698436560,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19471769.jpeg",
+            "title": "Análisis de precios del 27 de octubre: BTC, ETH, BNB, XRP, SOL, ADA, DOGE, TON, LINK, MATIC",
+            "url": "https://es.cointelegraph.com/news/price-analysis-10-27-btc-eth-bnb-xrp-sol-ada-doge-ton-link-matic",
+            "body": "Bitcoin está tomando un respiro después del fuerte rally de esta semana, pero algunas altcoins selectas podrían estar listas para despegar en los próximos días",
+            "tags": "Markets|Bitcoin|Ethereum|Binance Coin|Ripple|Solana|Cardano|Dogecoin|Toncoin|Chainlink|Polygon|Price analysis",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC|ADA|DOGE|ETH|LINK",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19470289",
+            "guid": "https://es.cointelegraph.com/news/sam-bankman-fried-political-donations",
+            "published_on": 1698436500,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19470289.jpeg",
+            "title": "Abogado interroga a Sam Bankman-Fried sobre sus donaciones políticas",
+            "url": "https://es.cointelegraph.com/news/sam-bankman-fried-political-donations",
+            "body": "El ex CEO de FTX habría dicho que las donaciones hechas en su nombre provenían de \"préstamos de Alameda Research\" como parte de los esfuerzos para influir en las regulaciones estadounidenses para las criptomonedas",
+            "tags": "regulation|ftx|court|sam bankman-fried|trial",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "REGULATION|RESEARCH",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19468217",
+            "guid": "https://www.diariobitcoin.com/?p=165188",
+            "published_on": 1698433296,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Sam Bankman-Fried asegura que no defraudó a los clientes de FTX",
+            "url": "https://www.diariobitcoin.com/gente-cripto/sam-bankman-fried-asegura-que-no-defraudo-a-los-clientes-de-ftx/",
+            "body": "El fundador y antiguo CEO de FTX rechazó haber actuado en contra de los usuarios del exchange, y que el plan era hacer del exchange la mejor plataforma para el comercio de futuros.",
+            "tags": "Exchanges|Gente cripto",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "EXCHANGE",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19467925",
+            "guid": "https://es.cointelegraph.com/news/chainlink-leads-the-market-with-61-gain-whats-driving-link-price",
+            "published_on": 1698432600,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19467925.jpeg",
+            "title": "Chainlink lidera el mercado con una subida semanal del 61%: ¿qué impulsa el precio de LINK?",
+            "url": "https://es.cointelegraph.com/news/chainlink-leads-the-market-with-61-gain-whats-driving-link-price",
+            "body": "La semana pasada, el precio del LINK experimentó una sorprendente subida de dos dígitos, pero ¿a qué se debe exactamente este movimiento?",
+            "tags": "markets|link|marines|oracles|FTT|CZ|funding",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "LINK|MARKET",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19467448",
+            "guid": "https://es.cointelegraph.com/news/blockchain-bitcoin-congestion-transaction-queues-deter-nefarious-actors-study",
+            "published_on": 1698432000,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19467448.jpeg",
+            "title": "Congestión de blockchain y colas en transacciones disuaden a \"nefastos actores\": Estudio",
+            "url": "https://es.cointelegraph.com/news/blockchain-bitcoin-congestion-transaction-queues-deter-nefarious-actors-study",
+            "body": "Según el estudio, la \"plenitud\" de una cadena de bloques está directamente relacionada con su seguridad",
+            "tags": "Security|Mt. Gox",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BLOCKCHAIN",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19467242",
+            "guid": "https://es.cointelegraph.com/news/la-privacidad-absoluta-en-web3-es-un-cuento-chino",
+            "published_on": 1698431160,
+            "imageurl": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+            "title": "¿La privacidad absoluta en web3 es un cuento chino?",
+            "url": "https://es.cointelegraph.com/news/la-privacidad-absoluta-en-web3-es-un-cuento-chino",
+            "body": "Max Li, experto en tecnologías de descentralización, menciona que la anonimización en la web3 resulta un tanto cuestionable.",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19465698",
+            "guid": "https://es.cointelegraph.com/news/audits-and-rug-pulled-projects-a-650b-token-burn-and-major-defi-protocol-quits-uk-finance-redefined",
+            "published_on": 1698429300,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19465698.jpeg",
+            "title": "Finance Redefined: Auditorías y proyectos rug-pulled, quema de tokens de USD 650,000 millones, y un protocolo DeFi abandona Reino Unido",
+            "url": "https://es.cointelegraph.com/news/audits-and-rug-pulled-projects-a-650b-token-burn-and-major-defi-protocol-quits-uk-finance-redefined",
+            "body": "El fundador de Uniswap quemó USD 650,000 millones de HayCoin, lo que equivale al 99% de la oferta del token",
+            "tags": "Uniswap|Hacks|Cryptocurrencies|Solana|United Kingdom",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "ICO|UNI|SOL",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19465568",
+            "guid": "https://es.cointelegraph.com/news/fed-boe-officials-share-continuing-interest-cbdc-stablecoin-regulation",
+            "published_on": 1698429000,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19465568.jpeg",
+            "title": "Reserva Federal y Banco de Inglaterra interesados en regular las CBDC y stablecoins",
+            "url": "https://es.cointelegraph.com/news/fed-boe-officials-share-continuing-interest-cbdc-stablecoin-regulation",
+            "body": "Sir Jon Cunliffe analiza las soluciones de pago del pasado y del futuro en su último discurso como subgobernador del BOE",
+            "tags": "CBDC|Stablecoin|Federal Reserve|Bank of England",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "REGULATION",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19463307",
+            "guid": "https://es.cointelegraph.com/news/sam-bankman-fried-denies-defrauding-ftx-users",
+            "published_on": 1698424800,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19463307.jpeg",
+            "title": "Sam Bankman-Fried niega en su juicio haber estafado a usuarios de FTX",
+            "url": "https://es.cointelegraph.com/news/sam-bankman-fried-denies-defrauding-ftx-users",
+            "body": "Como último testigo de su defensa, el ex-CEO de FTX atribuyó parte de la culpa del fracaso del exchange de criptomonedas a Gary Wang y Nishad Singh",
+            "tags": "regulation|fraud|court|trial|ftx|sam bankman-fried",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "EXCHANGE|REGULATION",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19463050",
+            "guid": "https://www.diariobitcoin.com/?p=165176",
+            "published_on": 1698424522,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Polygon y BNB con aumentos modestos mientras NuggetRush lleva a cabo su preventa",
+            "url": "https://www.diariobitcoin.com/articulos-patrocinados/polygon-y-bnb-con-aumentos-modestos-mientras-nugget-lleva-a-cabo-su-preventa/",
+            "body": "Mientras MATIC y BNB se enfrentan a vientos bajistas, NuggetRush ofrece una opción GameFi que combina la minería de oro, criptomonedas, y el juego impulsado por la comunidad en Ethereum.",
+            "tags": "Artículos patrocinados",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "MATIC|ETH",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19463304",
+            "guid": "https://es.cointelegraph.com/news/venezuelan-banks-will-use-qr-code-to-implement-interbank-mobile-payment",
+            "published_on": 1698424260,
+            "imageurl": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+            "title": "Bancos venezolanos utilizarán código QR para implementar el pago móvil interbancario",
+            "url": "https://es.cointelegraph.com/news/venezuelan-banks-will-use-qr-code-to-implement-interbank-mobile-payment",
+            "body": "De acuerdo con los involucrados, la intención es que el ecosistema bancario evolucione a una fórmula más simplificada para realizar pagos.",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19461521",
+            "guid": "https://es.cointelegraph.com/news/bitcoin-beats-sp500-october-40k-btc-price-predictions",
+            "published_on": 1698421800,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19461521.jpeg",
+            "title": "Bitcoin supera al S&P 500 en octubre y llegan predicciones de precios de USD 40,000",
+            "url": "https://es.cointelegraph.com/news/bitcoin-beats-sp500-october-40k-btc-price-predictions",
+            "body": "Bitcoin tiene \"combustible de sobra\" para llegar a los USD 40,000, según el análisis, mientras el precio de BTC mira al cierre de la vela semanal y mensual",
+            "tags": "Bitcoin|BTC price prediction|stocks|s&p 500",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19461859",
+            "guid": "https://es.cointelegraph.com/news/international-regulators-warned-the-spanish-cnmv-of-unregistered-entities",
+            "published_on": 1698421740,
+            "imageurl": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+            "title": "Reguladores internacionales advirtieron a la CNMV española de entidades no registradas",
+            "url": "https://es.cointelegraph.com/news/international-regulators-warned-the-spanish-cnmv-of-unregistered-entities",
+            "body": "Empresas radicadas en Luxemburgo, Grecia, Irlanda, Reino Unido, Alemania, Italia y Grecia estarían prestando sus servicios sin autorización y además utilizando nombres de entidades debidamente reguladas.",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19460474",
+            "guid": "https://es.cointelegraph.com/news/sam-bankman-fried-testimony-jury",
+            "published_on": 1698420000,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19460474.jpeg",
+            "title": "Jurado escucha testimonio de Sam Bankman-Fried: \"Mucha gente salió herida\"",
+            "url": "https://es.cointelegraph.com/news/sam-bankman-fried-testimony-jury",
+            "body": "El antiguo CEO de FTX volvió al estrado para presentar su testimonio ante un jurado de 12 personas a medida que el juicio penal empezaba a llegar a sus últimas fases",
+            "tags": "regulation|law|court|ftx|sam bankman-fried",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "REGULATION",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19460067",
+            "guid": "https://es.cointelegraph.com/news/germany-mercedes-lufthansa-nfts",
+            "published_on": 1698419400,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19460067.jpeg",
+            "title": "Cómo grandes empresas alemanas como Mercedes y Lufthansa utilizan NFT",
+            "url": "https://es.cointelegraph.com/news/germany-mercedes-lufthansa-nfts",
+            "body": "Las marcas alemanas adoptan los NFT, explorando nuevas formas de relacionarse con los clientes y fidelizarlos",
+            "tags": "Germany|Europe|European Union",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19460264",
+            "guid": "https://es.cointelegraph.com/news/turkey-plans-craft-crypto-framework-2024",
+            "published_on": 1698419100,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19460264.jpeg",
+            "title": "Turquía planea crear un marco regulatorio para criptomonedas en 2024",
+            "url": "https://es.cointelegraph.com/news/turkey-plans-craft-crypto-framework-2024",
+            "body": "Los proveedores de criptoactivos, como los exchanges de criptomonedas, también recibirán una definición legal.",
+            "tags": "Turquia|CBDC",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "REGULATION",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19459793",
+            "guid": "https://www.diariobitcoin.com/?p=165172",
+            "published_on": 1698418806,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Meta sigue acumulando pérdidas millonarias por su metaverso en el tercer trimestre 2023",
+            "url": "https://www.diariobitcoin.com/metaverso/meta-acumula-perdidas-millonarias-metaverso-2023/",
+            "body": "Reality Labs, la unidad de metaverso de Meta, ahora ha perdido cerca de USD $25 mil millones desde principios de 2022.",
+            "tags": "Empresas|Metaverso",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19458952",
+            "guid": "https://es.cointelegraph.com/news/dydx-dex-launches-layer-1-blockchain",
+            "published_on": 1698417000,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19458952.jpeg",
+            "title": "dYdX lanza blockchain de capa 1, validadores y stakers recibirán todas las comisiones",
+            "url": "https://es.cointelegraph.com/news/dydx-dex-launches-layer-1-blockchain",
+            "body": "dYdX completa el lanzamiento de su blockchain proof-of-stake de capa 1 con la creación de su bloque génesis por parte de los validadores de la cadena",
+            "tags": "Ddecentralized exchange|dYdX|layer 1|blockchain|validators|stakers|USDC.",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BLOCKCHAIN",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19459229",
+            "guid": "https://es.cointelegraph.com/news/chatgpt-openai-new-team-ai-risks",
+            "published_on": 1698417000,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19459229.jpeg",
+            "title": "OpenAI crea un nuevo equipo para comprobar los riesgos de la IA",
+            "url": "https://es.cointelegraph.com/news/chatgpt-openai-new-team-ai-risks",
+            "body": "OpenAI, creador de ChatGPT, se está tomando en serio todo el espectro de riesgos de seguridad relacionados con IA.",
+            "tags": "ChatGPT|OpenAI|IA|inteligencia artificial|AI",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19458226",
+            "guid": "https://www.diariobitcoin.com/?p=165169",
+            "published_on": 1698415927,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Próxima actualización de Ethereum, ‘Dencun’, se pospone para 2024",
+            "url": "https://www.diariobitcoin.com/ethereum/proxima-actualizacion-de-ethereum-dencun-2024/",
+            "body": "Los desarrolladores de Ethereum acordaron lanzar Dencun en la red principal para inicios de 2024, en lugar de este año como planeaban. Dencun traerá mejoras de escalabilidad y el llamado \"proto-danksharding\".",
+            "tags": "Ethereum",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "ETH",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19458476",
+            "guid": "https://es.cointelegraph.com/news/new-altcoin-from-polygon-soars-39-on-listing-on-bitget-on-day-of-bitcoin-retreat",
+            "published_on": 1698415200,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19458476.jpeg",
+            "title": "Nueva altcoin de Polygon se dispara un 39% tras su listado en Bitget en un día en que Bitcoin experimenta una corrección",
+            "url": "https://es.cointelegraph.com/news/new-altcoin-from-polygon-soars-39-on-listing-on-bitget-on-day-of-bitcoin-retreat",
+            "body": "Después del rally impulsado por los ETF de BTC, el mercado de criptomonedas vuelve a correlacionarse con el pesimismo del mercado de valores debido a las perspectivas desfavorables para las grandes empresas tecnológicas",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC|ALTCOIN|MATIC|TRADING",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19457933",
+            "guid": "https://es.cointelegraph.com/news/we-use-artificial-intelligence-to-track-your-bitcoin-and-collect-tax-states-federal-revenue-of-brazil",
+            "published_on": 1698414660,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19457933.jpeg",
+            "title": "Secretaría de Ingresos Federales de Brasil declara que utiliza inteligencia artificial para rastrear el Bitcoin y cobrar impuestos",
+            "url": "https://es.cointelegraph.com/news/we-use-artificial-intelligence-to-track-your-bitcoin-and-collect-tax-states-federal-revenue-of-brazil",
+            "body": "Secretaría de Ingresos Federales enfatiza que ha estado utilizando herramientas de inteligencia artificial para monitorear las transacciones de Bitcoin y criptomonedas, con el objetivo de evitar que los usuarios evadan el pago de impuestos en el país",
+            "tags": "",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19458285",
+            "guid": "https://es.cointelegraph.com/news/un-launches-international-effort-ai-governance-challenges",
+            "published_on": 1698414600,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19458285.jpeg",
+            "title": "ONU crea comité internacional para abordar los retos de la gobernanza de IA",
+            "url": "https://es.cointelegraph.com/news/un-launches-international-effort-ai-governance-challenges",
+            "body": "La lista de participantes incluye a líderes de la industria tecnológica, representantes de gobiernos desde España a Arabia Saudí, y académicos de EE.UU., Rusia y Japón.",
+            "tags": "Tecnologia|Naciones unidas|IA|inteligencia artificial",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "OTHER",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19456822",
+            "guid": "https://www.diariobitcoin.com/?p=165163",
+            "published_on": 1698413175,
+            "imageurl": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+            "title": "Bitcoin alcanza nuevo máximo de precio histórico en Argentina, Nigeria y Turquía",
+            "url": "https://www.diariobitcoin.com/bitcoin/bitcoin-alcanza-nuevo-maximo-en-argentina/",
+            "body": "Además del peso argentino, Bitcoin también alcanzó precios récord en relación con otras monedas fiduciarias altamente inflacionarias en el mundo: la naira nigeriana, la lira turca.",
+            "tags": "Argentina|Bitcoin",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC",
+            "source_info": {
+                "name": "DiarioBitcoin",
+                "img": "https://images.cryptocompare.com/news/default/diariobitcoin.png",
+                "lang": "ES"
+            },
+            "source": "diariobitcoin"
+        },
+        {
+            "id": "19456666",
+            "guid": "https://es.cointelegraph.com/news/floki-price-soars-140-memecoins-doge-pepe",
+            "published_on": 1698413100,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19456666.jpeg",
+            "title": "FLOKI se dispara un 140% en una semana: ¿están las memecoins como DOGE y PEPE finalmente despertando?",
+            "url": "https://es.cointelegraph.com/news/floki-price-soars-140-memecoins-doge-pepe",
+            "body": "Las ganancias de FLOKI coinciden con el lanzamiento de su plataforma de tokenización, TokenFi, pero ¿es sostenible el rally?",
+            "tags": "Floki Price|FLOKI|Memecoin|Dogecoin|PEPE|Shiba Inu|Bitcoin ETF|DOGE price|SHIB",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "DOGE|SHIB|TRADING",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19458073",
+            "guid": "https://es.cointelegraph.com/news/taiwan-introduces-crypto-bill-parliament",
+            "published_on": 1698412800,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19458073.jpeg",
+            "title": "Taiwán presenta al Parlamento un proyecto de ley sobre criptomonedas",
+            "url": "https://es.cointelegraph.com/news/taiwan-introduces-crypto-bill-parliament",
+            "body": "El proyecto de ley sobre gestión de activos virtuales pretende ofrecer \"mayor protección\" a los clientes y \"supervisar adecuadamente\" el sector.",
+            "tags": "Taiwan|criptomonedas|parlamento|proyecto de ley",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "ASIA",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19456324",
+            "guid": "https://es.cointelegraph.com/news/elon-musk-x-aim-revolutionize-finance-central-hub",
+            "published_on": 1698412500,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19456324.jpeg",
+            "title": "X pretende revolucionar las finanzas como plataforma central",
+            "url": "https://es.cointelegraph.com/news/elon-musk-x-aim-revolutionize-finance-central-hub",
+            "body": "Elon Musk concibe X como una plataforma financiera integral, que abarca todos los aspectos de la vida financiera de los usuarios, desde el dinero y valores hasta la eliminación de la necesidad de cuentas bancarias tradicionales",
+            "tags": "Technology|Elon Musk|Twitter",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "TECHNOLOGY",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19456109",
+            "guid": "https://es.cointelegraph.com/news/trezor-investigates-new-phishing",
+            "published_on": 1698411900,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19456109.jpeg",
+            "title": "Trezor investiga campaña de phishing, según afirma un ejecutivo",
+            "url": "https://es.cointelegraph.com/news/trezor-investigates-new-phishing",
+            "body": "Josef Tetek, embajador de la marca Trezor, enfatizó que la empresa de billeteras de hardware nunca solicita la frase de recuperación, el PIN o la frase de contraseña de los usuarios",
+            "tags": "Phishing|Trezor|Email|Security",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "WALLET",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        },
+        {
+            "id": "19455422",
+            "guid": "https://es.cointelegraph.com/news/bitcoin-2023-uptober-btc-price-research",
+            "published_on": 1698410400,
+            "imageurl": "https://resources.cryptocompare.com/news/17/19455422.jpeg",
+            "title": "Bitcoin ha tenido ganancias de un 26% en octubre",
+            "url": "https://es.cointelegraph.com/news/bitcoin-2023-uptober-btc-price-research",
+            "body": "Bitcoin ha proporcionado ganancias que \"sientan las bases para una reanudación de la tendencia alcista de 2023\", dice el último análisis de Glassnode.",
+            "tags": "Bitcoin|precio de BTC|uptober|BTC|analisis de mercado|precio de bitcoin",
+            "lang": "ES",
+            "upvotes": "0",
+            "downvotes": "0",
+            "categories": "BTC",
+            "source_info": {
+                "name": "CoinTelegraph",
+                "img": "https://images.cryptocompare.com/news/default/cointelegraph.png",
+                "lang": "ES"
+            },
+            "source": "cointelegraph_es"
+        }
+    ],
+    "RateLimit": {},
+    "HasWarning": false
+}

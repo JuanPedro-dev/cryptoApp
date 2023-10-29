@@ -1,0 +1,46 @@
+<div class="container-center">
+
+    <div class="login">
+        <img class="login-img" src="../../../../assets/img/police-man-icon.svg" alt="login img">
+
+        <h1 class="login--tittle">Inicio Sesión</h1>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
+
+            <mat-form-field>
+                <mat-label>Email</mat-label>
+                <input matInput #inputName [formControl]="mailFormControl" [errorStateMatcher]="matcher"
+                    autocomplete="off">
+                <mat-error *ngIf="mailFormControl.hasError('minlength') && !mailFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="mailFormControl.hasError('required')">
+                    Email <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Introduce tu contraseña</mat-label>
+                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                    [formControl]="passwordFormControl">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error
+                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Contraseña es <strong>requerida</strong>
+                </mat-error>
+            </mat-form-field>
+
+            
+            <div class="container-btn">
+                <a class="btn btn--create" mat-button color="primary" routerLink="/auth/sign-up" >Crear Cuenta</a>
+                <button class="btn" mat-raised-button color="primary" [disabled]="formLogin.invalid">Login</button>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,5 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, inject } from '@angular/core';
 import { Router } from '@angular/router';
+import { AuthService } from '@core/services/auth.service';
 
 @Component({
   selector: 'app-nav-bar',
@@ -7,13 +8,13 @@ import { Router } from '@angular/router';
   styleUrls: ['./nav-bar.component.css']
 })
 export class NavBarComponent implements OnInit{
+  private router: Router = inject(Router);
+  private authService: AuthService = inject(AuthService);
+  isUser: boolean = false;
 
-  @Input() isUser: boolean = false;
-
-
-  constructor(private router: Router){}
 
   ngOnInit(): void {
+    this.isUser = this.authService.isLogged();
   }
   
   public goToLogin(){
