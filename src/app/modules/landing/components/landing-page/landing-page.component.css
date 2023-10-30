@@ -4,10 +4,10 @@
 
 .hero {
   height: 100vh;
-  background-color: #4f433a;
+  /* background: url("https://images.unsplash.com/photo-1589652717406-1c69efaf1ff8?auto=format&fit=crop&q=80&w=1770&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D") center/cover; */
   background: url("https://cdn.computerhoy.com/sites/navi.axelspringer.es/public/styles/1200/public/media/image/2018/03/290655-apple-lanzaria-nuevo-macbook-air-mas-barato-potente.jpg?itok=ySWhq6Us") center/cover;
+  /* box-shadow: inset 180px 120px 250px #00000018, inset 204px 0px 250px #000000; */
   background-repeat: no-repeat;
-  /* box-shadow: inset 180px 120px 250px #000000, inset 204px 0px 250px #000000; */
 }
 
 

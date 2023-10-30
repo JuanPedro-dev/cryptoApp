@@ -1,0 +1,49 @@
+.main {
+  max-width: 420px;
+  text-align: center;
+  margin: 2rem auto;
+  place-content: center;
+  color: white;
+
+  @media screen and (min-width: 600px) {
+    color: black;
+    & {
+      background: rgba(245, 245, 245, 0.732);
+      // border: 1px solid black;
+      border-radius: 1rem;
+      padding: 2rem;
+      box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.25);
+    }
+  }
+}
+
+.main--tittle {
+  font-size: 1.7rem;
+  font-weight: 500;
+}
+
+.main-img {
+  display: flex;
+  margin-inline: auto;
+  max-width: 5rem;
+  padding-bottom: 1rem;
+}
+
+mat-form-field {
+  width: 90%;
+}
+
+.container-btn {
+  display: flex;
+  justify-content: space-evenly;
+  & .btn--create {
+    font-weight: 600;
+    color: darkblue;
+  }
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
