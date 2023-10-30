@@ -60,7 +60,7 @@ export class SignInComponent implements OnInit {
       next: (res: boolean) => {
 
         if (res) {
-          this.auth.login()
+          this.auth.login(this.mailFormControl.value!)
           this.router.navigate(['/crypto']); 
         }
         else {

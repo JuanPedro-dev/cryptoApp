@@ -50,17 +50,23 @@ export class UserManagerComponent implements OnInit, OnDestroy {
   }
 
   deleteUser(userID: string) {
-    this.userService.deleteUser(userID).subscribe({
-      next: () => {
-        // TODO: se puede agregar a un logger
-      },
-      error: (err: Error) => {
-        console.error('Observer got an error: ' + err);
-      },
-      complete: () => this.onLoad(),
-    })
+
+    if(userID == 'admin@gmail.com' ) {
+      alert('No puedes eliminar al admin')
+    } else {
+      this.userService.deleteUser(userID).subscribe({
+        next: () => {
+          // TODO: se puede agregar a un logger
+        },
+        error: (err: Error) => {
+          console.error('Observer got an error: ' + err);
+        },
+        complete: () => this.onLoad(),
+      })
+    }
   }
 
+  
   onLoad():void{
     this.userService.getUsers().subscribe({
       next: (users: User[]) => {

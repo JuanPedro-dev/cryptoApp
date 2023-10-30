@@ -2,7 +2,12 @@
   "users": [
     {
       "id": "admin@gmail.com",
-      "name": "Laverna",
+      "name": "Administrador",
+      "password": "1234"
+    },
+    {
+      "id": "juan@gmail.com",
+      "name": "Juan",
       "password": "1234"
     },
     {

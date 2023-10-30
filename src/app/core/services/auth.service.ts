@@ -9,11 +9,21 @@ export class AuthService {
     return sessionStorage.getItem('tokenAuthCrypto') != null;
   }
 
-  login(): void{
-    sessionStorage.setItem( 'tokenAuthCrypto', "debería suministrar un token" );
+  login(id_email: string): void{
+    sessionStorage.setItem( 'tokenAuthCrypto', id_email );
   }
 
   logout() : void{
     sessionStorage.removeItem('tokenAuthCrypto');
   }
+
+  getUser(): string{
+    return sessionStorage.getItem('tokenAuthCrypto') ?? '';
+  }
+
+  isAdmin(): boolean{
+    return sessionStorage.getItem('tokenAuthCrypto') == 'admin@gmail.com';
+  }
+
+
 }

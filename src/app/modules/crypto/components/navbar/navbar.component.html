@@ -152,6 +152,7 @@
       <button mat-button routerLink="/crypto/price">Criptomonedas</button>
       <button mat-button routerLink="/crypto/trending">Trending</button>
       <button mat-button routerLink="/crypto/news">Noticias</button>
+      <button mat-button routerLink="/users/dashboard" *ngIf="isAdmin">Dashboard</button>
       <button mat-button routerLink="/users/profile">Perfil</button>
 
       <span class="spacer"></span>
@@ -331,6 +332,9 @@ C301.6,205.6,305.6,213.6,305.6,221.6z" />
             </button>
             <button mat-menu-item>
                   <span mat-button routerLink="/crypto/news">Noticias</span>
+            </button>
+            <button mat-menu-item>
+                  <span mat-button routerLink="/users/profile" *ngIf="isAdmin">Dashboard</span>
             </button>
             <button mat-menu-item>
                   <span mat-button routerLink="/users/profile">Perfil</span>
