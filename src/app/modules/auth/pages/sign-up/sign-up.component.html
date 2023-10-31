@@ -1,83 +1,89 @@
 <app-nav-bar></app-nav-bar>
 
-<div class="container-center mt-2">
-    
-    <div class="login">
 
-        <h1 class="login--tittle">Crear una cuenta</h1>
+<div class="container-center">
 
-        <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
+    <div class=" mt-2">
 
-            <mat-form-field>
-                <mat-label>Nombre de Usuario</mat-label>
-                <input matInput #inputName [formControl]="nameFormControl" [errorStateMatcher]="matcher"
-                    autocomplete="off">
-                <mat-error *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
-                    Min {{minLength}} caracteres!
-                </mat-error>
-                <mat-error *ngIf="nameFormControl.hasError('required')">
-                    Nombre de Usuario <strong>requerido</strong>
-                </mat-error>
-            </mat-form-field>
+        <div class="login">
 
-            <mat-form-field class="example-full-width">
-                <mat-label>Email</mat-label>
-                <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                       placeholder="johnDoe@example.com">
-                <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
-                  Ingrese un mail valido
-                </mat-error>
-                <mat-error *ngIf="emailFormControl.hasError('required')">
-                  Email es <strong>requerido</strong>
-                </mat-error>
-                <mat-error *ngIf="emailFormControl.hasError('required')">
-                    Email es <strong>requerido</strong>
-                </mat-error>
-              </mat-form-field>
+            <h1 class="login--tittle">Crear una cuenta</h1>
 
-            <mat-form-field>
-                <mat-label>Introduce tu contraseña</mat-label>
-                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
-                    [formControl]="passwordFormControl">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                    [attr.aria-pressed]="hide">
-                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-                <mat-error
-                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
-                    Min {{minLength}} caracteres!
-                </mat-error>
-                <mat-error *ngIf="passwordFormControl.hasError('required')">
-                    Contraseña es <strong>requerida</strong>
-                </mat-error>
-            </mat-form-field>
+            <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
 
-            <mat-form-field>
-                <mat-label>Confirma tu contraseña</mat-label>
-                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
-                    [formControl]="passwordConfirmFormControl">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                    [attr.aria-pressed]="hide">
-                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
-                <mat-error
-                    *ngIf="passwordConfirmFormControl.hasError('minlength') && !passwordConfirmFormControl.hasError('required')">
-                    Min {{minLength}} caracteres!
-                </mat-error>
-                <mat-error *ngIf="passwordConfirmFormControl.hasError('required')">
-                    Contraseña es <strong>requerida</strong>
-                </mat-error>
-            </mat-form-field>
+                <mat-form-field>
+                    <mat-label>Nombre de Usuario</mat-label>
+                    <input matInput #inputName [formControl]="nameFormControl" [errorStateMatcher]="matcher"
+                        autocomplete="off">
+                    <mat-error *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
+                        Min {{minLength}} caracteres!
+                    </mat-error>
+                    <mat-error *ngIf="nameFormControl.hasError('required')">
+                        Nombre de Usuario <strong>requerido</strong>
+                    </mat-error>
+                </mat-form-field>
 
-             <!-- TODO: replicar estilo -->
-            <mat-error style="text-align: left;" *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
-                Contraseñas <strong>diferentes</strong>
-            </mat-error>
+                <mat-form-field class="example-full-width">
+                    <mat-label>Email</mat-label>
+                    <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                        placeholder="johnDoe@example.com">
+                    <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                        Ingrese un mail valido
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email es <strong>requerido</strong>
+                    </mat-error>
+                    <mat-error *ngIf="emailFormControl.hasError('required')">
+                        Email es <strong>requerido</strong>
+                    </mat-error>
+                </mat-form-field>
 
-            <div class="container-btn">
-                <a class="btn btn--create" mat-button color="primary" routerLink="/auth/sign-in" >Login</a>
-                <button class="btn" mat-raised-button color="primary"  [disabled]="formLogin.invalid">Crear Cuenta</button>
-            </div>
-        </form>
+                <mat-form-field>
+                    <mat-label>Introduce tu contraseña</mat-label>
+                    <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                        [formControl]="passwordFormControl">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error
+                        *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+                        Min {{minLength}} caracteres!
+                    </mat-error>
+                    <mat-error *ngIf="passwordFormControl.hasError('required')">
+                        Contraseña es <strong>requerida</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field>
+                    <mat-label>Confirma tu contraseña</mat-label>
+                    <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                        [formControl]="passwordConfirmFormControl">
+                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                        [attr.aria-pressed]="hide">
+                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                    </button>
+                    <mat-error
+                        *ngIf="passwordConfirmFormControl.hasError('minlength') && !passwordConfirmFormControl.hasError('required')">
+                        Min {{minLength}} caracteres!
+                    </mat-error>
+                    <mat-error *ngIf="passwordConfirmFormControl.hasError('required')">
+                        Contraseña es <strong>requerida</strong>
+                    </mat-error>
+                </mat-form-field>
+
+                <!-- TODO: replicar estilo -->
+                <mat-error style="text-align: left;"
+                    *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
+                    Contraseñas <strong>diferentes</strong>
+                </mat-error>
+
+                <div class="container-btn">
+                    <a class="btn btn--create" mat-button color="primary" routerLink="/auth/sign-in">Login</a>
+                    <button class="btn" mat-raised-button color="primary" [disabled]="formLogin.invalid">Crear
+                        Cuenta</button>
+                </div>
+            </form>
+        </div>
     </div>
 </div>

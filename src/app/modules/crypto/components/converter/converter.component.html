@@ -1,48 +1,51 @@
-<div class="main">
+<div class="container-center">
+    <div class="main">
 
-    <h1 class="main--tittle">Calculadora de criptomonedas</h1>
+        <h1 class="main--tittle">Calculadora de criptomonedas</h1>
 
-    <form class="form">
+        <form class="form">
 
-        <mat-form-field>
-            <mat-label>Introduce un número</mat-label>
-            <input matInput type="number" [formControl]="valueFormControl"  name="name">
-            <button *ngIf="valueFormControl.value" matSuffix mat-icon-button aria-label="Clear" (click)="valueFormControl.reset()">
-                <mat-icon>close</mat-icon>
-            </button>
-        </mat-form-field>
+            <mat-form-field>
+                <mat-label>Introduce un número</mat-label>
+                <input matInput type="number" [formControl]="valueFormControl" name="name">
+                <button *ngIf="valueFormControl.value" matSuffix mat-icon-button aria-label="Clear"
+                    (click)="valueFormControl.reset()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
 
-        <mat-form-field>
-            <mat-label> Seleccionar criptomoneda </mat-label>
-            <input type="text" placeholder="Seleccione" aria-label="Number" matInput [formControl]="cryptoFormControl"
-                [matAutocomplete]="auto">
-            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
-                <mat-option *ngFor="let crypto of filteredCrypto | async" [value]="crypto">
-                    {{ crypto }}
-                </mat-option>
-            </mat-autocomplete>
-            <button *ngIf="cryptoFormControl.value" matSuffix mat-icon-button (click)="cryptoFormControl.reset()">
-                <mat-icon>close</mat-icon>
-            </button>
-        </mat-form-field>
+            <mat-form-field>
+                <mat-label> Seleccionar criptomoneda </mat-label>
+                <input type="text" placeholder="Seleccione" aria-label="Number" matInput
+                    [formControl]="cryptoFormControl" [matAutocomplete]="auto">
+                <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete">
+                    <mat-option *ngFor="let crypto of filteredCrypto | async" [value]="crypto">
+                        {{ crypto }}
+                    </mat-option>
+                </mat-autocomplete>
+                <button *ngIf="cryptoFormControl.value" matSuffix mat-icon-button (click)="cryptoFormControl.reset()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
 
-        <mat-form-field>
-            <mat-label> Seleccionar divisa </mat-label>
-            <input type="text" placeholder="Seleccione" aria-label="Number" matInput [formControl]="currencyFormControl"
-                [matAutocomplete]="selector">
-            <mat-autocomplete autoActiveFirstOption #selector="matAutocomplete">
-                <mat-option *ngFor="let option of filteredCurrency | async" [value]="option">
-                    {{ option }}
-                </mat-option>
-            </mat-autocomplete>
-            <button *ngIf="currencyFormControl.value" matSuffix mat-icon-button (click)="currencyFormControl.reset">
-                <mat-icon>close</mat-icon>
-            </button>
-        </mat-form-field>
-    </form>
+            <mat-form-field>
+                <mat-label> Seleccionar divisa </mat-label>
+                <input type="text" placeholder="Seleccione" aria-label="Number" matInput
+                    [formControl]="currencyFormControl" [matAutocomplete]="selector">
+                <mat-autocomplete autoActiveFirstOption #selector="matAutocomplete">
+                    <mat-option *ngFor="let option of filteredCurrency | async" [value]="option">
+                        {{ option }}
+                    </mat-option>
+                </mat-autocomplete>
+                <button *ngIf="currencyFormControl.value" matSuffix mat-icon-button (click)="currencyFormControl.reset">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+        </form>
 
-    <div class="result">
-        Resultado: {{ calculatedResult }}
+        <div class="result">
+            Resultado: {{ calculatedResult }}
+        </div>
+
     </div>
-
 </div>

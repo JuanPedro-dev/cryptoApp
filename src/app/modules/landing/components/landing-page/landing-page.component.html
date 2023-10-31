@@ -5,12 +5,16 @@
 <div class="container">
 
   <section class="hero container-center">
-    <div class="hero--info text-center">
+
+    <div class="hero--info container-center text-center mt-2">
       <h1 class="h2 mb-2">Tu lugar favorito</h1>
       <h3 class="h3 mb-2">para invertir en criptomonedas</h3>
       <button mat-raised-button routerLink="/crypto/price" color="primary" *ngIf="isLoggedIn">Servicios</button>
       <button mat-raised-button routerLink="/auth/sign-in" color="primary" *ngIf="!isLoggedIn">Iniciar Sesión</button>
     </div>
+    
+    <img class="hero--img" src="../../../../../assets/img/business-man.webp" alt="business man">
+
   </section>
 
   <section class="p-2">
@@ -46,32 +50,32 @@
 
   <section class="text-center m-2">
 
-    <h2 class="mb-2 h3">Nuestros Servicios</h2>
+    <h2 class="mb-2 h2">Nuestros Servicios</h2>
 
     <div class="gallery">
 
       <div class="gallery--item">
         <i class="fa fa-bluetooth-b" aria-hidden="true"></i>
-        <h3>Conectividad</h3>
+        <h3 class="h4 mb-2">Conectividad</h3>
         <p>Tenemos la conectividad mas amplia del mercado!</p>
       </div>
 
       <div class="gallery--item">
         <i class="fa fa-money" aria-hidden="true"></i>
-        <h3>Actualizaciones continua</h3>
+        <h3 class="h4 mb-2">Actualizaciones continua</h3>
         <p>Todos nuestros valores se mantienen bajo una constante actualización</p>
       </div>
 
       <div class="gallery--item">
         <i class="fa fa-calculator" aria-hidden="true"></i>
-        <h3>Exchange</h3>
+        <h3 class="h4 mb-2">Exchange</h3>
         <p>Tenes a disposición nuestras herramientas para garantizar tus cambios!
         </p>
       </div>
 
       <div class="gallery--item">
         <i class="fa fa-handshake-o" aria-hidden="true"></i>
-        <h3>P2P</h3>
+        <h3 class="h4 mb-2">P2P</h3>
         <p>Comercio P2P con cotizaciones y seguridad</p>
       </div>
     </div>
