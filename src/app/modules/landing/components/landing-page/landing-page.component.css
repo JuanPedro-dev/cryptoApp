@@ -1,5 +1,6 @@
 .container {
   color: #fff;
+  word-wrap: break-word;
 }
 
 .hero {
@@ -10,7 +11,6 @@
   background-repeat: no-repeat;
 }
 
-
 .gallery {
   display: flex;
   justify-content: center;
@@ -19,7 +19,7 @@
 }
 
 .gallery--item {
-  width: 150px;
+  width: 250px;
   flex-basis: 150px;
   flex-grow: 1;
 }
@@ -39,7 +39,7 @@ i {
   border: 1px solid #39c;
   border-radius: 10px;
   padding: 10px;
-  width: 100%;
+  width: 80%;
   max-width: 320px;
 }
 

@@ -30,7 +30,7 @@ export class PriceComponent implements OnInit, OnDestroy {
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
   ngOnInit() {
-    this.onLoad();  
+    this.onLoad();
   }
 
   ngAfterViewInit() {
@@ -57,9 +57,7 @@ export class PriceComponent implements OnInit, OnDestroy {
 
   onLoad(): void {
     this.subs.add(
-
-      // TODO: en caso de bloqueo, cambie el método getCryptocurrencies()
-      // this.cryptoService.getCryptocurrencies().subscribe({
+      // en caso de bloqueo, cambie el método getListCriptoPrice() por getCryptocurrencies()
 
       this.cryptoService.getListCriptoPrice().subscribe({
         next: (prices: Price[]) => {
@@ -73,7 +71,6 @@ export class PriceComponent implements OnInit, OnDestroy {
           this.dataSource = new MatTableDataSource<Price>(this.dataArray);
         },
       })
-
     );
   }
 }

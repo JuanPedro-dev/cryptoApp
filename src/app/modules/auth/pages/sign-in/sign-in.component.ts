@@ -82,11 +82,11 @@ export class SignInComponent implements OnInit {
   validateAuth(): Observable<boolean> {
     // Valida el front pero por si llega undefined o null
     const userMail: string = this.mailFormControl.value ?? '';
-    const userPassword: string = this.mailFormControl.value ?? '';
+    const userPassword: string = this.passwordFormControl.value ?? '';
 
     return this.userService.getUserById(userMail).pipe(
       map((user: User) => {
-        return user?.password == '1234';
+        return user?.password == userPassword;
       }),
       catchError((error: boolean) => {
         console.error('Error fetching user:', error);

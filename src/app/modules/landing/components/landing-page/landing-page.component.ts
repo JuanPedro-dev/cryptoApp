@@ -8,16 +8,21 @@ import { AuthService } from '@core/services/auth.service';
   styleUrls: ['./landing-page.component.css'],
 })
 export class LandingPageComponent implements OnInit{
+  private authService: AuthService = inject(AuthService);
+  
+  @Input() isLoggedIn: Boolean = false;
   show: Boolean = false;
   
-  private authService: AuthService = inject(AuthService);
-
-  @Input() isLoggedIn: Boolean = false;
-
   ngOnInit(): void {
     this.isLoggedIn = this.authService.isLogged();
   }
 
+  contact = {
+    fullName: '',
+    city: '',
+    email: '',
+    comment: ''
+  }
   model = {
     name: '',
     checkAdult: false,
@@ -26,8 +31,10 @@ export class LandingPageComponent implements OnInit{
   }
   
   onSubmit(form: NgForm): void {
-    
-    console.log('Form values', form);
+    console.log('Form values', form.value);
 
+    this.show = true;
+    form.reset(); 
   }
+
 }

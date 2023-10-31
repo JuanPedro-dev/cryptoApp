@@ -10,9 +10,9 @@ import { Subscription } from 'rxjs';
 })
 export class TrendingComponent {
   cryptoTrending: Trending = { coins: [], nfts: [] };
-
+  
   constructor(private trendingResponse: ServiceTrending) {}
-  private subscription: Subscription | undefined;
+  private subscription: Subscription = new Subscription();
 
   ngOnInit() {
     this.getListTrending();
@@ -20,19 +20,13 @@ export class TrendingComponent {
 
   getListTrending() {
     this.subscription = this.trendingResponse.getTrending().subscribe(
-      (data: Trending) => {
-        this.cryptoTrending = data;
-        console.log('Data from API:', this.cryptoTrending);
-      },
-      (error) => {
-        console.error('Error fetching data:', error);
-      }
+      (data: Trending) => this.cryptoTrending = data,
+      (error) => console.error('Error fetching Trending data:', error)
     );
   }
 
   ngOnDestroy() {
-    if (this.subscription) {
-      this.subscription.unsubscribe();
-    }
+    this.subscription.unsubscribe();
   }
+
 }

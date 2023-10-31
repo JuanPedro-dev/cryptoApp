@@ -8,7 +8,8 @@
     <div class="hero--info text-center">
       <h1 class="h2 mb-2">Tu lugar favorito</h1>
       <h3 class="h3 mb-2">para invertir en criptomonedas</h3>
-      <button mat-raised-button routerLink="/crypto/price" color="primary">Servicios</button>
+      <button mat-raised-button routerLink="/crypto/price" color="primary" *ngIf="isLoggedIn">Servicios</button>
+      <button mat-raised-button routerLink="/auth/sign-in" color="primary" *ngIf="!isLoggedIn">Iniciar Sesión</button>
     </div>
   </section>
 
@@ -80,21 +81,24 @@
   <section class="text-center ">
     <h3 class="h3 mb-2">Contactanos!</h3>
 
-    <form class="form">
+    <form class="form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
       <h4>Todos los campos * son requeridos</h4>
 
       <div>
-        <input type="text" name="nombre" placeholder="Nombre y apellido*" required />
-        <input type="text" name="ciudad" placeholder="Ciudad*" required />
-        <input type="email" name="email" placeholder="Email*" required />
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="fullName" placeholder="Nombre y apellido*" required
+          [(ngModel)]="contact.fullName" />
+        <input type="text" id="city" name="city" placeholder="Ciudad*" required [(ngModel)]="contact.city" />
+        <input type="email" id="email" name="email" placeholder="Email*" required [(ngModel)]="contact.email" />
       </div>
 
-      <h4 for="mensaje">Información adicional*</h4>
-      <input type="text" placeholder="Escribe tu mensaje" required />
+      <h4 for="mensaje">Información adicional</h4>
+      <input type="text" id="comment" name="comment" placeholder="Escribe tu mensaje" [(ngModel)]="contact.comment" />
       <p *ngIf="show"> Gracias Por Contactarse!!!</p>
 
-      <button mat-raised-button color="primary" (click)="show=true">Enviar</button>
+      <button type="submit" mat-raised-button color="primary" [disabled]="contactForm.invalid">Enviar</button>
     </form>
+
   </section>
 
   <footer class="mt-2">

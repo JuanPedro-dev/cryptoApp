@@ -6,11 +6,10 @@ import { PRICES, CURRENCIES } from './mock/price';
 @Component({
   selector: 'app-converter',
   templateUrl: './converter.component.html',
-  styleUrls: ['./converter.component.scss']
+  styleUrls: ['./converter.component.scss'],
 })
 export class ConverterComponent {
-
-  valueFormControl = new FormControl(0);
+  valueFormControl = new FormControl();
   cryptoFormControl = new FormControl('');
   currencyFormControl = new FormControl('');
 
@@ -18,7 +17,7 @@ export class ConverterComponent {
   filteredCurrency: Observable<string[]> = new Observable();
 
   // Para reiniciar los inputs
-  value: number | null = null ;
+  value: number | null = null;
   filterCrypto = '';
   filterCurrency = '';
   calculatedResult: number = 0;
@@ -39,23 +38,22 @@ export class ConverterComponent {
     );
 
     this.valueFormControl.valueChanges.subscribe((newValue) => {
-      if(newValue != null) this.calculatedResult = newValue
-
+      if (newValue != null) this.calculatedResult = newValue;
       // TODO: Consumir la calculadora, y mostrar
-
     });
   }
 
   _filterCrypto(value: string): string[] {
     const filterValue = value.toLowerCase();
-    return this.allPrices.filter((allPrices) => allPrices.toLowerCase().includes(filterValue)
+    return this.allPrices.filter((allPrices) =>
+      allPrices.toLowerCase().includes(filterValue)
     );
   }
 
   _filter(value: string): string[] {
     const filterValue = value.toLowerCase();
-    return this.allCurrencies.filter((allCurrencies) => allCurrencies.toLowerCase().includes(filterValue)
+    return this.allCurrencies.filter((allCurrencies) =>
+      allCurrencies.toLowerCase().includes(filterValue)
     );
   }
- 
 }

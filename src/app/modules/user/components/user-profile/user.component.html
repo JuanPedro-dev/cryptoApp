@@ -60,12 +60,14 @@
             </mat-form-field>
 
             <!-- TODO: replicar estilo -->
-            <mat-error style="text-align: left; padding-left: 2.3rem; font-size: 0.8rem;" *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
+            <mat-error style="text-align: left; padding-left: 2.3rem; font-size: 0.8rem;"
+                *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
                 Contraseñas <strong>diferentes</strong>
             </mat-error>
 
             <div class="container-btn">
-                <button class="btn" mat-raised-button color="primary" [disabled]="formLogin.invalid" >Guardar</button>
+                <a class="btn btn-danger" mat-raised-button (click)="deleteMe()">Eliminar</a>
+                <button class="btn" mat-raised-button color="primary" [disabled]="formLogin.invalid">Guardar</button>
             </div>
         </form>
     </div>
