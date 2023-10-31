@@ -34,6 +34,7 @@ export class SignInComponent implements OnInit {
   mailFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(this.minLength),
+    Validators.email
   ]);
   passwordFormControl = new FormControl('', [
     Validators.required,

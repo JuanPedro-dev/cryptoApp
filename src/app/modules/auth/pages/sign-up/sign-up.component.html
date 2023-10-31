@@ -23,15 +23,15 @@
                     </mat-error>
                 </mat-form-field>
 
-                <mat-form-field class="example-full-width">
+                <mat-form-field>
                     <mat-label>Email</mat-label>
                     <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
-                        placeholder="johnDoe@example.com">
+                        placeholder="johnDoe@example.com" autocomplete="off">
                     <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
                         Ingrese un mail valido
                     </mat-error>
-                    <mat-error *ngIf="emailFormControl.hasError('required')">
-                        Email es <strong>requerido</strong>
+                    <mat-error *ngIf="emailFormControl.hasError('minlength') && !emailFormControl.hasError('required')">
+                        Min {{minLength}} caracteres!
                     </mat-error>
                     <mat-error *ngIf="emailFormControl.hasError('required')">
                         Email es <strong>requerido</strong>
