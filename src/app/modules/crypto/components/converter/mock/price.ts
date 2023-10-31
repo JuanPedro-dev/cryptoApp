@@ -1,4 +1,4 @@
-import { Price } from "../../price/interface/price"
+import { Price } from "../../../../../core/interface/price"
 
 
 export  const CURRENCIES: string[] = [

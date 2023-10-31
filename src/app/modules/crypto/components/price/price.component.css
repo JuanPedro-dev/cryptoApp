@@ -47,3 +47,7 @@ table {
   align-items: center;
   height: inherit;
 }
+
+.favorite{
+  color: gold;
+}

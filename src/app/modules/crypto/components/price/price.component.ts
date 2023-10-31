@@ -1,11 +1,14 @@
 import { Component, OnDestroy, OnInit, ViewChild, inject } from '@angular/core';
-import { Price } from '../price/interface/price';
+import { Price } from '../../../../core/interface/price';
 import { PriceService } from './service/price.service';
 import { Subscription } from 'rxjs';
 
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { MatTableDataSource } from '@angular/material/table';
+import { User } from '@core/interface/user';
+import { AuthService } from '@core/services/auth.service';
+import { UserService } from '@core/services/user.service';
 
 @Component({
   selector: 'app-precio',
@@ -13,9 +16,12 @@ import { MatTableDataSource } from '@angular/material/table';
   styleUrls: ['./price.component.css'],
 })
 export class PriceComponent implements OnInit, OnDestroy {
-  dataArray: Price[] = [];
   private subs: Subscription = new Subscription();
-  cryptoService: PriceService = inject(PriceService);
+  private cryptoService: PriceService = inject(PriceService);
+  private authService: AuthService = inject(AuthService);
+  private userService: UserService = inject(UserService);
+  dataArray: Price[] = [];
+  currentUser: User = new User();
 
   displayedColumns: string[] = [
     'market_cap_rank',
@@ -23,6 +29,7 @@ export class PriceComponent implements OnInit, OnDestroy {
     'current_price',
     'high_24h',
     'low_24h',
+    'favorites',
   ];
   dataSource!: MatTableDataSource<Price>;
 
@@ -31,6 +38,14 @@ export class PriceComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.onLoad();
+    this.subs.add(
+      this.authService
+        .getUser()
+        .subscribe({
+          next: (user: User) => (this.currentUser = user ?? new User()),
+          error: (err: any) => console.log(err),
+        })
+    );
   }
 
   ngAfterViewInit() {
@@ -59,7 +74,8 @@ export class PriceComponent implements OnInit, OnDestroy {
     this.subs.add(
       // en caso de bloqueo, cambie el método getListCriptoPrice() por getCryptocurrencies()
 
-      this.cryptoService.getListCriptoPrice().subscribe({
+      // this.cryptoService.getListCriptoPrice().subscribe({
+      this.cryptoService.getCryptocurrencies().subscribe({
         next: (prices: Price[]) => {
           this.dataArray = prices;
           this.dataSource = new MatTableDataSource<Price>(this.dataArray);
@@ -72,5 +88,14 @@ export class PriceComponent implements OnInit, OnDestroy {
         },
       })
     );
+  }
+
+  addToFav(name: string): void {
+    if(this.currentUser.favoritesCryptosName.includes(name)) 
+      this.currentUser.favoritesCryptosName = this.currentUser.favoritesCryptosName.filter(item => item !== name);
+    else 
+    this.currentUser.favoritesCryptosName.push(name);
+
+    this.userService.updateUser(this.currentUser).subscribe({error: (err: any) => console.log(err)})
   }
 }

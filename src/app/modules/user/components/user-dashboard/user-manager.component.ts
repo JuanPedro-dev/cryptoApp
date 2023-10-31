@@ -4,7 +4,7 @@ import { UserService } from '../../../../core/services/user.service';
 import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
-import { User } from '@modules/auth/interface/user';
+import { User } from '@core/interface/user';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({

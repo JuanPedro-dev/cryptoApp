@@ -7,8 +7,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { UserService } from '@core/services/user.service';
-import { MyErrorStateMatcher } from '@modules/auth/interface/auth';
-import { User } from '@modules/auth/interface/user';
+import { MyErrorStateMatcher } from '@core/interface/auth';
+import { User } from '@core/interface/user';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../../../core/services/auth.service';
 import { MatSnackBar } from '@angular/material/snack-bar';
@@ -32,6 +32,7 @@ export class UserComponent implements OnInit, OnDestroy {
     id: '',
     name: '',
     password: '',
+    favoritesCryptosName: []
   };
 
   formLogin!: FormGroup;
@@ -59,7 +60,7 @@ export class UserComponent implements OnInit, OnDestroy {
       this.user = history.state.data;
     } else {
       this.userSubscription.add(
-        this.userService.getUserById(this.authService.getUser()).subscribe({
+        this.userService.getUserById(this.authService.getUserMail()).subscribe({
           next: (user: User) => (this.user = user),
           error: (e) => console.error(e),
         })
@@ -67,7 +68,7 @@ export class UserComponent implements OnInit, OnDestroy {
     }
 
     this.formLogin = this.formBuilder.group({
-      id: this.authService.getUser(),
+      id: this.authService.getUserMail(),
       name: this.nameFormControl,
       password: this.passwordFormControl,
     });
@@ -92,11 +93,11 @@ export class UserComponent implements OnInit, OnDestroy {
   }
 
   deleteMe() {
-    if (this.authService.getUser() == 'admin@gmail.com') {
+    if (this.authService.getUserMail() == 'admin@gmail.com') {
       this.launchError();
     } else {
       this.userSubscription.add(
-        this.userService.deleteUser(this.authService.getUser()).subscribe({
+        this.userService.deleteUser(this.authService.getUserMail()).subscribe({
           next: () => {},
           error: (err) => console.log('Error: deleteMe()' + err),
         })

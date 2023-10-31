@@ -7,11 +7,11 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 
-import { MyErrorStateMatcher } from '../../interface/auth';
+import { MyErrorStateMatcher } from '../../../../core/interface/auth';
 
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from '../../../../core/services/user.service';
-import { User } from '../../interface/user';
+import { User } from '../../../../core/interface/user';
 import { Subscription } from 'rxjs';
 import { AuthService } from '@core/services/auth.service';
 

@@ -1,9 +1,13 @@
-import { Injectable } from '@angular/core';
+import { Injectable, inject } from '@angular/core';
+import { UserService } from './user.service';
+import { User } from '@core/interface/user';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
+  private userService: UserService = inject(UserService);
 
   isLogged(): boolean{
     return sessionStorage.getItem('tokenAuthCrypto') != null;
@@ -17,8 +21,12 @@ export class AuthService {
     sessionStorage.removeItem('tokenAuthCrypto');
   }
 
-  getUser(): string{
+  getUserMail(): string{
     return sessionStorage.getItem('tokenAuthCrypto') ?? '';
+  }
+
+  getUser(): Observable<User>{
+    return this.userService.getUserById(sessionStorage.getItem('tokenAuthCrypto') ?? '')
   }
 
   isAdmin(): boolean{
