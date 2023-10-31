@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit, inject } from '@angular/core';
-import { 
+import {
   FormBuilder,
   FormControl,
   FormGroup,
@@ -13,6 +13,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 import { UserService } from '../../../../core/services/user.service';
 import { User } from '../../interface/user';
 import { Subscription } from 'rxjs';
+import { AuthService } from '@core/services/auth.service';
 
 @Component({
   selector: 'auth-sign-up',
@@ -20,12 +21,12 @@ import { Subscription } from 'rxjs';
   styleUrls: ['./sign-up.component.scss'],
 })
 export class SignUpComponent implements OnInit, OnDestroy {
-
   private formBuilder: FormBuilder = inject(FormBuilder);
   private _snackBar: MatSnackBar = inject(MatSnackBar);
   private router: Router = inject(Router);
   private userService: UserService = inject(UserService);
-  private userSubscription: Subscription = new Subscription
+  private authService: AuthService = inject(AuthService);
+  private subs: Subscription = new Subscription();
 
   hide = true;
   minLength: number = 4;
@@ -35,6 +36,10 @@ export class SignUpComponent implements OnInit, OnDestroy {
     Validators.required,
     Validators.minLength(this.minLength),
   ]);
+  emailFormControl = new FormControl('', [
+    Validators.required,
+    Validators.email,
+  ]);
   passwordFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(this.minLength),
@@ -42,10 +47,6 @@ export class SignUpComponent implements OnInit, OnDestroy {
   passwordConfirmFormControl = new FormControl('', [
     Validators.required,
     Validators.minLength(this.minLength),
-  ]);
-  emailFormControl = new FormControl('', [
-    Validators.required,
-    Validators.email,
   ]);
 
   matcher = new MyErrorStateMatcher();
@@ -59,26 +60,36 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.userSubscription) {
-      this.userSubscription.unsubscribe();
-    }
+    this.subs.unsubscribe();
   }
 
   onSubmit(): void {
-    console.log(this.formLogin.value);
-    
-    const subscription = this.userService.addUser(this.formLogin.value).subscribe({
-      next: (user: User) => {
-        // console.log(`Usuario agregado: {${user.id}, ${user.name}, ${user.password}}`);
-      },
-      error: (err: Error) => {
-        console.error('Observer got an error: ' + err);
-      }
-    })
-
-    this.userSubscription.add(subscription);
-
-    this.router.navigate(['/crypto']);
-    this.formLogin.reset();
+    // console.log(this.formLogin.value);
+    try {
+      this.subs.add(
+        this.userService.addUser(this.formLogin.value).subscribe({
+          next: (user: User) => {
+            if (user != undefined) {
+              this.authService.login(user.id);
+              this.router.navigate(['/crypto']);
+              this.formLogin.reset();
+            } else {
+              this.launchError()
+            }
+          },
+          error: (err: Error) => console.error('Observer got an error: ' + err),
+        })
+      );
+    } catch (err) { console.log("try error"+123);}
   }
+
+  launchError(): void {
+    this._snackBar.open('¡El Usuario ya existe!', '', {
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      duration: 8000,
+    });
+  }
+
 }
+

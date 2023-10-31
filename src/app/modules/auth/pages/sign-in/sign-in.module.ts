@@ -6,12 +6,8 @@ import { SignInComponent } from './sign-in.component';
 
 import { SharedModule } from '@shared/shared.module';
 
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { ReactiveFormsModule } from '@angular/forms';
-import { MatButtonModule } from '@angular/material/button';
+import { MaterialModule } from '@shared/components/material/material.module';
 
 
 @NgModule({
@@ -22,8 +18,8 @@ import { MatButtonModule } from '@angular/material/button';
     CommonModule,
     SignInRoutingModule,
     ReactiveFormsModule,
-    MatFormFieldModule, MatInputModule, MatIconModule, MatSnackBarModule, MatButtonModule,
-    SharedModule
+    MaterialModule,
+    SharedModule,
   ]
 })
 export class SignInModule { }

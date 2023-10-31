@@ -69,3 +69,24 @@ img{
 .h4{
   font-size: 1.5rem !important; 
 }
+
+:root{
+  --color-danger: rgba(218, 24, 24, 0.945);;
+}
+
+// Format Angular Material 
+
+.mat-mdc-snack-bar-container {
+  --mat-mdc-snack-bar-button-color: #ffffff;
+  --mdc-snackbar-supporting-text-color: #ffffff;
+
+  &.app-notification-error {
+    --mdc-snackbar-container-color: #f23a2f;
+  }
+
+  &.app-notification-success {
+    --mdc-snackbar-container-color: #43a446;
+  }
+  --mdc-snackbar-container-color: var(--color-danger);
+
+}

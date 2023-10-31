@@ -11,6 +11,7 @@ import { MyErrorStateMatcher } from '@modules/auth/interface/auth';
 import { User } from '@modules/auth/interface/user';
 import { Subscription } from 'rxjs';
 import { AuthService } from '../../../../core/services/auth.service';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user',
@@ -22,6 +23,7 @@ export class UserComponent implements OnInit, OnDestroy {
   private router: Router = inject(Router);
   private userService: UserService = inject(UserService);
   private authService: AuthService = inject(AuthService);
+  private _snackBar: MatSnackBar = inject(MatSnackBar);
   private userSubscription: Subscription = new Subscription();
 
   minLength: number = 4;
@@ -90,9 +92,8 @@ export class UserComponent implements OnInit, OnDestroy {
   }
 
   deleteMe() {
-    debugger
     if (this.authService.getUser() == 'admin@gmail.com') {
-      alert("NO puedes eliminar al Administrador")
+      this.launchError();
     } else {
       this.userSubscription.add(
         this.userService.deleteUser(this.authService.getUser()).subscribe({
@@ -104,4 +105,14 @@ export class UserComponent implements OnInit, OnDestroy {
       this.authService.logout();
     }
   }
+
+  launchError(): void {
+    this._snackBar.open('No puedes eliminar al admin!', '', {
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      duration: 5000,
+    });
+  }
+  
+
 }

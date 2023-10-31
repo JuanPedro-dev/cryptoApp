@@ -4,6 +4,7 @@
 
 img {
   height: 2rem;
+  cursor: pointer;
 }
 
 .desktop {

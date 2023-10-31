@@ -4,13 +4,9 @@ import { CommonModule } from '@angular/common';
 import { SignUpRoutingModule } from './sign-up-routing.module';
 import { SignUpComponent } from './sign-up.component';
 
-import { MatIconModule } from '@angular/material/icon';
-import { MatInputModule } from '@angular/material/input';
-import { MatFormFieldModule } from '@angular/material/form-field';
-import { MatSnackBarModule } from '@angular/material/snack-bar';
-import { ReactiveFormsModule } from '@angular/forms';
-import {MatButtonModule} from '@angular/material/button';
+import { ReactiveFormsModule } from '@angular/forms'; 
 import { SharedModule } from '@shared/shared.module';
+import { MaterialModule } from '@shared/components/material/material.module';
 
 @NgModule({
   declarations: [
@@ -20,7 +16,7 @@ import { SharedModule } from '@shared/shared.module';
     CommonModule,
     SignUpRoutingModule,
     ReactiveFormsModule,
-    MatFormFieldModule, MatInputModule, MatIconModule, MatSnackBarModule, MatButtonModule,
+    MaterialModule,
     SharedModule,
   ]
 })

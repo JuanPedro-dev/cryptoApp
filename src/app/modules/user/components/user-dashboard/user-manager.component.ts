@@ -5,6 +5,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { User } from '@modules/auth/interface/user';
+import { MatSnackBar } from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-user-manager',
@@ -15,6 +16,7 @@ export class UserManagerComponent implements OnInit, OnDestroy {
   private dataArray: User[] = [];
   private subs: Subscription = new Subscription();
   private userService: UserService = inject(UserService);
+  private _snackBar: MatSnackBar = inject(MatSnackBar);
   dataSource!: MatTableDataSource<User>;
 
   @ViewChild(MatPaginator, { static: true }) paginator!: MatPaginator;
@@ -52,12 +54,10 @@ export class UserManagerComponent implements OnInit, OnDestroy {
   deleteUser(userID: string) {
 
     if(userID == 'admin@gmail.com' ) {
-      alert('No puedes eliminar al admin')
+      this.launchError();
     } else {
       this.userService.deleteUser(userID).subscribe({
-        next: () => {
-          // TODO: se puede agregar a un logger
-        },
+        next: () => {},
         error: (err: Error) => {
           console.error('Observer got an error: ' + err);
         },
@@ -65,7 +65,6 @@ export class UserManagerComponent implements OnInit, OnDestroy {
       })
     }
   }
-
   
   onLoad():void{
     this.userService.getUsers().subscribe({
@@ -81,4 +80,14 @@ export class UserManagerComponent implements OnInit, OnDestroy {
       }
     })
   }
+  
+
+  launchError(): void {
+    this._snackBar.open('¡No puedes eliminar al admin!', '', {
+      horizontalPosition: 'center',
+      verticalPosition: 'bottom',
+      duration: 5000,
+    });
+  }
+
 }

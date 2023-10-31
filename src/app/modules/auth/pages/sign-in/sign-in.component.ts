@@ -24,7 +24,7 @@ export class SignInComponent implements OnInit {
   private _snackBar: MatSnackBar = inject(MatSnackBar);
   private router: Router = inject(Router);
   private userService: UserService = inject(UserService);
-  private auth: AuthService = inject(AuthService);
+  private authService: AuthService = inject(AuthService);
   private userSubscription: Subscription = new Subscription();
 
   hide = true;
@@ -60,7 +60,7 @@ export class SignInComponent implements OnInit {
       next: (res: boolean) => {
 
         if (res) {
-          this.auth.login(this.mailFormControl.value!)
+          this.authService.login(this.mailFormControl.value!)
           this.router.navigate(['/crypto']); 
         }
         else {
@@ -74,9 +74,7 @@ export class SignInComponent implements OnInit {
   }
 
   ngOnDestroy() {
-    if (this.userSubscription) {
-      this.userSubscription.unsubscribe();
-    }
+    this.userSubscription.unsubscribe();
   }
 
   validateAuth(): Observable<boolean> {
