@@ -48,6 +48,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
     Validators.required,
     Validators.minLength(this.minLength),
   ]);
+  favoritesCryptosNameFormControl = new FormControl([]);
 
   matcher = new MyErrorStateMatcher();
 
@@ -56,6 +57,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
       id: this.emailFormControl,
       name: this.nameFormControl,
       password: this.passwordFormControl,
+      favoritesCryptosName: this.favoritesCryptosNameFormControl
     });
   }
 
@@ -80,7 +82,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
           error: (err: Error) => console.error('Observer got an error: ' + err),
         })
       );
-    } catch (err) { console.log("try error"+123);}
+    } catch (err) { console.log("try error" + err);}
   }
 
   launchError(): void {

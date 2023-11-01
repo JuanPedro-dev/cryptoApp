@@ -1,5 +1,5 @@
 .container {
-  color: #fff;
+  color: var(--color-txt-primary);
   word-wrap: break-word;
 }
 
@@ -15,6 +15,7 @@
   flex-basis: 250px;
   max-height: 80vh;
   display: none;
+  color: var(--color-txt-primary);
 }
 
 @media screen and (min-width: 940px) {
@@ -24,6 +25,7 @@
 }
 
 .hero--info {
+  color: var(--color-txt-primary);
   min-height: 80vh;  
   flex-direction: column;
   & h1{

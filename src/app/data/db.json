@@ -3,110 +3,199 @@
     {
       "id": "admin@gmail.com",
       "name": "Administrador",
-      "password": "1234"
-    },
-    {
-      "id": "juan@gmail.com",
-      "name": "Juan",
       "password": "1234",
       "favoritesCryptosName": [
         "BNB"
       ]
     },
     {
-      "id": "jboswood1@simplemachines.org",
-      "name": "Jacinthe",
-      "password": "jN4vvAi<"
+      "id": "juan@gmail.com",
+      "name": "Juan",
+      "password": "1234",
+      "favoritesCryptosName": [
+        "BNB",
+        "Bitcoin"
+      ]
     },
     {
-      "id": "mrestorick2@ucoz.com",
-      "name": "Myer",
-      "password": "aY0Af$"
+      "id": "amityakov0@cloudflare.com",
+      "name": "Adolpho Mityakov",
+      "password": "cV3?KR}q2l_<0dG",
+      "favoritesCryptosName": []
     },
     {
-      "id": "lmacpherson3@youku.com",
-      "name": "Linzy",
-      "password": "uE9./jF"
+      "id": "gcostall1@japanpost.jp",
+      "name": "Gib Costall",
+      "password": "zE5{PJhvKnA5ttt)",
+      "favoritesCryptosName": []
     },
     {
-      "id": "kwanderschek4@vkontakte.ru",
-      "name": "Kacey",
-      "password": "kD07\\<w,"
+      "id": "ghaskur2@biglobe.ne.jp",
+      "name": "Gerome Haskur",
+      "password": "dL9'2`cS7!",
+      "favoritesCryptosName": []
     },
     {
-      "id": "pellwell5@goo.ne.jp",
-      "name": "Pryce",
-      "password": "bH8H"
+      "id": "rsellors3@storify.com",
+      "name": "Rockie Sellors",
+      "password": "yD2_E|ikGRF@<",
+      "favoritesCryptosName": []
     },
     {
-      "id": "sfearby6@nature.com",
-      "name": "Siana",
-      "password": "xU2ChR|"
+      "id": "selsegood4@webeden.co.uk",
+      "name": "Sinclare Elsegood",
+      "password": "iB6|!DLyg@,0BfZ",
+      "favoritesCryptosName": []
     },
     {
-      "id": "lhassen7@npr.org",
-      "name": "Lenard",
-      "password": "vP1hF"
+      "id": "kmewton5@bbb.org",
+      "name": "Kayley Mewton",
+      "password": "dE8\\i<BL79c8",
+      "favoritesCryptosName": []
     },
     {
-      "id": "mkapelhoff8@who.int",
-      "name": "Milly",
-      "password": "rH4<"
+      "id": "tcockland6@wix.com",
+      "name": "Teirtza Cockland",
+      "password": "aY6!ghXN2",
+      "favoritesCryptosName": []
     },
     {
-      "id": "ahatfull9@foxnews.com",
-      "name": "Ancell",
-      "password": "aX8KdH"
+      "id": "ssmurthwaite7@storify.com",
+      "name": "Selina Smurthwaite",
+      "password": "hE2$.M?{CtE",
+      "favoritesCryptosName": []
     },
     {
-      "id": "golivaa@cdbaby.com",
-      "name": "Gerianne",
-      "password": "wC3Gt"
+      "id": "bpetrovykh8@youku.com",
+      "name": "Basil Petrovykh",
+      "password": "yZ5\"}s.{{3",
+      "favoritesCryptosName": []
     },
     {
-      "id": "thaydenb@vimeo.com",
-      "name": "Trstram",
-      "password": "hG6wYO~"
+      "id": "dmcnay9@sfgate.com",
+      "name": "Daphene McNay",
+      "password": "cP3!c1xxRm34",
+      "favoritesCryptosName": []
     },
     {
-      "id": "dmaysorc@newyorker.com",
-      "name": "Dionysus",
-      "password": "iR1>"
+      "id": "jninehama@marketwatch.com",
+      "name": "Jeni Nineham",
+      "password": "gO7&5jN54",
+      "favoritesCryptosName": []
     },
     {
-      "id": "dharmourd@ebay.com",
-      "name": "Dom",
-      "password": "kJ5w)NU"
+      "id": "bwildeb@rakuten.co.jp",
+      "name": "Babb Wilde",
+      "password": "wY1`s0A9&~6%ULr",
+      "favoritesCryptosName": []
     },
     {
-      "id": "szeale@tinypic.com",
-      "name": "Shayla",
-      "password": "tN5zTF"
+      "id": "wheffronc@bigcartel.com",
+      "name": "Wilt Heffron",
+      "password": "nZ5_4K.3mRvNViB",
+      "favoritesCryptosName": []
     },
     {
-      "id": "dstroyanf@goodreads.com",
-      "name": "Dalenna",
-      "password": "cW6Y0$E"
+      "id": "dwadwelld@creativecommons.org",
+      "name": "Devlin Wadwell",
+      "password": "vT2)3s9XhIMN8u\"?",
+      "favoritesCryptosName": []
     },
     {
-      "id": "mcavellg@vinaora.com",
-      "name": "Maighdiln",
-      "password": "eH8z"
+      "id": "asedgmane@marriott.com",
+      "name": "Alberta Sedgman",
+      "password": "mK0.c+Dx5`m",
+      "favoritesCryptosName": []
     },
     {
-      "id": "agorringh@amazon.com",
-      "name": "Aymer",
-      "password": "pO0~4u"
+      "id": "frosgenf@posterous.com",
+      "name": "Faustine Rosgen",
+      "password": "iT2`DwVD\"M&\\X=2",
+      "favoritesCryptosName": []
     },
     {
-      "id": "hskamali@hc360.com",
-      "name": "Hamish",
-      "password": "mR8C"
+      "id": "pricardong@arizona.edu",
+      "name": "Polly Ricardon",
+      "password": "nB3+P$C34cb4}N",
+      "favoritesCryptosName": []
     },
     {
-      "id": "ctwintermanj@parallels.com",
-      "name": "Currey",
-      "password": "qZ7b"
+      "id": "dmoulandh@microsoft.com",
+      "name": "Deborah Mouland",
+      "password": "zT9`7ro_Dg,@Sa\\|",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "bfootei@slashdot.org",
+      "name": "Berne Foote",
+      "password": "aZ6=3*STuc'}",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "acanetj@salon.com",
+      "name": "Albert Canet",
+      "password": "zV3@!'d0_4_3YD8U",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "susherwoodk@microsoft.com",
+      "name": "Sargent Usherwood",
+      "password": "uN1>FiKCO~&+uc$g",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "kkenefordl@fda.gov",
+      "name": "Kelvin Keneford",
+      "password": "lW6\\!629t0",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "bkneafseym@geocities.jp",
+      "name": "Bernhard Kneafsey",
+      "password": "lX9&{qmN6j|X",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "selkingtonn@vk.com",
+      "name": "Sanson Elkington",
+      "password": "oI1~qpWbN0qJ",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "vsnazelo@baidu.com",
+      "name": "Venus Snazel",
+      "password": "zK2.mlQ5hz",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "bormondp@comsenz.com",
+      "name": "Barris Ormond",
+      "password": "fF8.L9##%h4eP`m'",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "gkiehneq@plala.or.jp",
+      "name": "Godwin Kiehne",
+      "password": "xV6.lu*%r`q0*",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "hgainesr@samsung.com",
+      "name": "Hagen Gaines",
+      "password": "kS0&<?qm+ZtD.%l",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "odamatos@live.com",
+      "name": "Ondrea Damato",
+      "password": "oA1_\\RjF",
+      "favoritesCryptosName": []
+    },
+    {
+      "id": "sgiloglyt@globo.com",
+      "name": "Sterling Gilogly",
+      "password": "rO6\\w&v0",
+      "favoritesCryptosName": []
     }
   ],
   "prices": [

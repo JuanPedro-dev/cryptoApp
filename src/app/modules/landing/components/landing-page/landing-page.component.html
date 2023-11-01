@@ -4,21 +4,21 @@
 
 <div class="container">
 
-  <section class="hero container-center">
+  <section class="hero container-center" uk-grid>
 
-    <div class="hero--info container-center text-center mt-2">
+    <div class="hero--info container-center text-center mt-2" uk-scrollspy="cls: uk-animation-slide-left; repeat: true">
       <h1 class="h2 mb-2">Tu lugar favorito</h1>
       <h3 class="h3 mb-2">para invertir en criptomonedas</h3>
       <button mat-raised-button routerLink="/crypto/price" color="primary" *ngIf="isLoggedIn">Servicios</button>
       <button mat-raised-button routerLink="/auth/sign-in" color="primary" *ngIf="!isLoggedIn">Iniciar Sesión</button>
     </div>
     
-    <img class="hero--img" src="../../../../../assets/img/business-man.webp" alt="business man">
+    <img class="hero--img" src="../../../../../assets/img/business-man.webp" alt="business man" uk-scrollspy="cls: uk-animation-slide-right; repeat: true">
 
   </section>
 
   <section class="p-2">
-    <div class="gallery">
+    <div class="gallery" uk-scrollspy="target: > app-crypto-card; cls: uk-animation-fade; delay: 300">
       <app-crypto-card [imageUrl]="
           'data:image/png;base64,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'
         " [titulo]="'Ethereum'" [precio]="'3000'" [porcentaje]="'10'"></app-crypto-card>
@@ -37,13 +37,13 @@
     </div>
   </section>
 
-  <div class="gallery">
+  <div class="gallery" uk-grid uk-scrollspy="cls: uk-animation-slide-bottom; target: .gallery--item; delay: 300; repeat: true">
     <img class="gallery--item"
       src="https://thumbor.forbes.com/thumbor/fit-in/x/https://www.forbes.com/advisor/in/wp-content/uploads/2023/01/maxim-hopman-fiXLQXAhCfk-unsplash-1-scaled.jpg"
       alt="imagen " />
     <img class="gallery--item"
       src="https://images.ctfassets.net/q5ulk4bp65r7/lUIdMeDm9tf33LZNjPqz8/a44f28b20bd9846efc62cf5a230d875a/Learn_Illustration_Ultimate_Guide_Bitcoin.webp?w=768&fm=png"
-      alt="imagen " />
+      alt="imagen " uk-scrollspy-class="uk-animation-slide-top">
     <img class="gallery--item" src="https://bitcoinwell.com/wp-content/uploads/2023/06/use-bitcoin-hero.png"
       alt="imagen " />
   </div>
