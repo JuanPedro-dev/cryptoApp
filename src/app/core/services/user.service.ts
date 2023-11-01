@@ -20,6 +20,7 @@ export class UserService {
    * @returns An Observable that emits the created user.
    */
   public addUser(user: User): Observable<User> {
+    console.log(user.favoritesCryptosName);
     return this.http.post<User>(`${this.apiServerUrl}/${this.entity}`, user)
       .pipe(
         catchError(this.handleError<User>('addUser'))

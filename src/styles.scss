@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
+@import url("./app/shared/components/style/uikit.css");
 
 /* You can add global styles to this file, and also import other style files */
 
@@ -74,7 +75,7 @@ img{
   --color-danger: rgba(218, 24, 24, 0.945);
   --color-primary: #3f51b5; 
   --color-txt-primary: black; 
-  --color-txt-primary: #fff; 
+  --color-txt-primary: #fff !important; 
 }
 
 // Format Angular Material 
@@ -93,3 +94,4 @@ img{
   --mdc-snackbar-container-color: var(--color-danger);
 
 }
+
