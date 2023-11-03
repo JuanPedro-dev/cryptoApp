@@ -1,12 +1,8 @@
-import { Price } from "../../../../../core/interface/price"
-
-
 export const CURRENCIES: { [key: string]: string } = {
   ARS: 'Peso Argentino',
   USD: 'Dólar Estadounidense',
   EUR: 'Euro'
 };
-
 
 export const PRICES =  [
     {

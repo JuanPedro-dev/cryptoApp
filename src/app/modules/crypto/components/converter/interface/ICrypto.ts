@@ -3,22 +3,15 @@ interface CoinInfo {
   FullName: string;
 }
 
-interface DISPLAY {
-  PRICE: number;
-}
-
-
 interface CurrencyData {
   PRICE: number;
   HIGHDAY: number;
   LOWDAY: number;
   CHANGEPCT24HOUR: number;
   OPENDAY: number;
- 
 }
 
 interface Raw {
-  
   [criptomoneda: string]: CurrencyData;
 }
 
@@ -31,3 +24,8 @@ export interface Crypto {
   RAW: Raw[];
 }
 
+export const CURRENCIES: { [key: string]: string } = {
+  ARS: 'Peso Argentino',
+  USD: 'Dólar Estadounidense',
+  EUR: 'Euro'
+};

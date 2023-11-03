@@ -1,9 +1,13 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
+import { Component, OnDestroy, OnInit, inject } from '@angular/core';
+import {
+  FormBuilder,
+  FormControl,
+  FormGroup,
+  Validators,
+} from '@angular/forms';
 import { Observable, startWith, map, Subscription } from 'rxjs';
-import { CURRENCIES } from './mock/price';
-import { ServiceCrypotoCalculator } from './service/calculador-service';
-import { Crypto } from './interface/ICrypto';
+import { CURRENCIES, Crypto } from './interface/ICrypto';
+import { calculatorService } from './service/calculador.service';
 
 @Component({
   selector: 'app-converter',
@@ -11,76 +15,79 @@ import { Crypto } from './interface/ICrypto';
   styleUrls: ['./converter.component.scss'],
 })
 export class ConverterComponent implements OnInit, OnDestroy {
+  private calculatorService: calculatorService = inject(calculatorService);
+  private subs: Subscription = new Subscription();
+
+  showResult = false;
+  price: number = 0;
+
+  // Formulario
+  form!: FormGroup;
+  formBuilder: FormBuilder = new FormBuilder();
+  valueFormControl = new FormControl();
+  cryptoFormControl = new FormControl('', Validators.required);
+  currencyFormControl = new FormControl('', Validators.required);
+
+  // Valores iniciales (filtrar)
   CURRENCIES = CURRENCIES;
   cryptoCalculator: Crypto = { Data: [], RAW: [] };
-  cryptoFormControl = new FormControl('');
-  currencyFormControl = new FormControl('');
+
+  // Valores Filtrados (Mostrar)
   filteredCrypto: Observable<string[]> = new Observable();
   filteredCurrency: Observable<string[]> = new Observable();
-  allCurrencies: { [key: string]: string } = CURRENCIES;
-  price: number | undefined;
-  highday: number | undefined;
-  lowday: number | undefined;
-  changepct24hour :number | undefined;
-  openday :  number | undefined;
-
-  cotizacionRealizada = false;
-
-  constructor(private cyptoCalculatorResponse: ServiceCrypotoCalculator) {}
-  private subscription: Subscription = new Subscription();
-
-  getCrypto() {
-    this.subscription = this.cyptoCalculatorResponse.getCriptolist().subscribe(
-      (data: Crypto) => {
-        this.cryptoCalculator = data;       
-      },
-      (error) => console.error('Error fetching Crypto data:', error)
-    );
-  }
-
-  cotizarDivisasYCriptomoneda() {
-    const divisaSeleccionada : any= this.currencyFormControl.value;
-    const criptomonedaSeleccionada: any = this.cryptoFormControl.value;  
-    if (divisaSeleccionada && criptomonedaSeleccionada) {      
-      this.cyptoCalculatorResponse.getResponseCrypto(criptomonedaSeleccionada, divisaSeleccionada).subscribe(
-        (data) => {
-          if (data.RAW[criptomonedaSeleccionada] && data.RAW[criptomonedaSeleccionada][divisaSeleccionada]) {
-            const { PRICE , HIGHDAY, LOWDAY ,CHANGEPCT24HOUR , OPENDAY } = data.RAW[criptomonedaSeleccionada][divisaSeleccionada];
-            this.price = +PRICE.toFixed(2);
-            this.highday = +HIGHDAY.toFixed(2);
-            this.lowday = +LOWDAY.toFixed(2);
-            this.changepct24hour = +CHANGEPCT24HOUR.toFixed(2);
-            this.openday = +OPENDAY.toFixed(2);
-          }
-          this.cotizacionRealizada = true;
-        },
-        (error) => {
-          console.error('Error al consultar datos de la criptomoneda:', error);
-        }
-      );
-    } else {
-      console.log('Selecciona una divisa y una criptomoneda antes de cotizar.');
-    }
-  }
-
-  
-
-  ngOnDestroy() {
-    this.subscription.unsubscribe();
-  }
 
   ngOnInit() {
-    this.getCrypto();
+    this.form = this.formBuilder.group({
+      cryptoFormControl: this.cryptoFormControl,
+      currencyFormControl: this.currencyFormControl,
+    });
 
-    this.filteredCurrency = this.currencyFormControl.valueChanges.pipe(
-      startWith(''),
-      map((value) => this._filter(value || ''))
+    this.getOptionsCrypto();
+  }
+
+  ngOnDestroy() {
+    this.subs.unsubscribe();
+  }
+
+  /**
+   *  Updating the selection options in cryptoFormControl
+   */
+  getOptionsCrypto(): void {
+    this.subs.add(
+      this.calculatorService.getCryptoList().subscribe({
+        next: (data: Crypto) => (this.cryptoCalculator = data),
+        error: (error) => console.error('Error: getCrypto() => ', error),
+      })
     );
   }
 
-  _filter(value: string): string[] {
-    const filterValue = value.toLowerCase();
-    const keys = Object.keys(this.allCurrencies);
-    return keys.filter((key) => key.toLowerCase().includes(filterValue));
+  calculate() {
+    const divisaSeleccionada: any = this.currencyFormControl.value;
+    const criptomonedaSeleccionada: any = this.cryptoFormControl.value;
+    if (divisaSeleccionada && criptomonedaSeleccionada) {
+      this.subs.add(
+        this.calculatorService
+          .getResponseCrypto(criptomonedaSeleccionada, divisaSeleccionada)
+          .subscribe(
+            (data) => {
+              if (
+                data.RAW[criptomonedaSeleccionada] &&
+                data.RAW[criptomonedaSeleccionada][divisaSeleccionada]
+              ) {
+                const { PRICE } =
+                  data.RAW[criptomonedaSeleccionada][divisaSeleccionada];
+                this.price = +PRICE.toFixed(2);
+                this.price *= this.valueFormControl.value;
+                this.showResult = true;
+              }
+            },
+            (error) =>
+              console.error(
+                'Error al consultar datos de la criptomoneda:',
+                error
+              )
+          )
+      );
+    }
   }
 }
