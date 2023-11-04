@@ -40,7 +40,7 @@
       <button class="btn mb-1" mat-raised-button color="primary" [disabled]="form.invalid"
         (click)="calculate()">Calcular</button>
 
-      <div class="result">
+      <div class="result" *ngIf="showResult">
         <strong>Resultado:</strong> {{ price | currency }} {{ currencyFormControl.value }}
       </div>
 

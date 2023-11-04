@@ -5,10 +5,6 @@ interface CoinInfo {
 
 interface CurrencyData {
   PRICE: number;
-  HIGHDAY: number;
-  LOWDAY: number;
-  CHANGEPCT24HOUR: number;
-  OPENDAY: number;
 }
 
 interface Raw {

@@ -42,8 +42,8 @@
                         Contraseña es <strong>requerida</strong>
                     </mat-error>
                 </mat-form-field>
-
-                <mat-form-field>
+ 
+              <!--  <mat-form-field>
                     <mat-label>Confirma tu contraseña</mat-label>
                     <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
                         [formControl]="passwordConfirmFormControl">
@@ -58,13 +58,13 @@
                     <mat-error *ngIf="passwordConfirmFormControl.hasError('required')">
                         Contraseña es <strong>requerida</strong>
                     </mat-error>
-                </mat-form-field>
+                </mat-form-field>-->
 
                 <!-- TODO: replicar estilo -->
-                <mat-error style="text-align: left; padding-left: 2.3rem; font-size: 0.8rem;"
+                <!-- <mat-error style="text-align: left; padding-left: 2.3rem; font-size: 0.8rem;"
                     *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
                     Contraseñas <strong>diferentes</strong>
-                </mat-error>
+                </mat-error>  -->
 
                 <div class="container-btn">
                     <a class="btn btn-danger" mat-raised-button (click)="deleteMe()">Eliminar</a>
