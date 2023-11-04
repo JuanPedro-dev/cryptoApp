@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { ManagerComponent } from './manager.component';
+import { adminGuard } from 'src/app/guards/admin.guard';
 
 const routes: Routes = [
   {
@@ -14,8 +15,8 @@ const routes: Routes = [
       },
       {
         path: 'dashboard',
-        loadChildren: () =>
-          import('../components/user-dashboard/user-manager.module').then(m=> m.UserManagerModule),
+        loadChildren: () => import('../components/user-dashboard/user-manager.module').then(m=> m.UserManagerModule),
+        canActivate: [adminGuard]
       },
       {
         path: 'profile',
