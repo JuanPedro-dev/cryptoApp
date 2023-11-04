@@ -25,6 +25,7 @@ export class UserComponent implements OnInit, OnDestroy {
   private authService: AuthService = inject(AuthService);
   private _snackBar: MatSnackBar = inject(MatSnackBar);
   private userSubscription: Subscription = new Subscription();
+  deleteModal: boolean = false;
 
   minLength: number = 4;
   hide = true;
@@ -32,7 +33,7 @@ export class UserComponent implements OnInit, OnDestroy {
     id: '',
     name: '',
     password: '',
-    favoritesCryptosName: []
+    favoritesCryptosName: [],
   };
 
   formLogin!: FormGroup;
@@ -52,6 +53,7 @@ export class UserComponent implements OnInit, OnDestroy {
     Validators.required,
     Validators.email,
   ]);
+  favoritesFormControl = new FormControl([]);
 
   matcher = new MyErrorStateMatcher();
 
@@ -61,7 +63,12 @@ export class UserComponent implements OnInit, OnDestroy {
     } else {
       this.userSubscription.add(
         this.userService.getUserById(this.authService.getUserMail()).subscribe({
-          next: (user: User) => (this.user = user),
+          next: (user: User) => {
+            this.user = user;
+            this.nameFormControl.setValue(user.name);
+            this.passwordFormControl.setValue(user.password);
+            this.favoritesFormControl.setValue(user.favoritesCryptosName as never[]);
+          },
           error: (e) => console.error(e),
         })
       );
@@ -71,6 +78,7 @@ export class UserComponent implements OnInit, OnDestroy {
       id: this.authService.getUserMail(),
       name: this.nameFormControl,
       password: this.passwordFormControl,
+      favoritesCryptosName: this.favoritesFormControl
     });
   }
 
@@ -81,6 +89,7 @@ export class UserComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
+
     this.userSubscription.add(
       this.userService.updateUser(this.formLogin.value).subscribe({
         next: (user: User) => {},
@@ -88,7 +97,7 @@ export class UserComponent implements OnInit, OnDestroy {
       })
     );
 
-    this.router.navigate(['/users/dashboard']);
+    this.router.navigate(['/crypto']);
     this.formLogin.reset();
   }
 
@@ -98,12 +107,13 @@ export class UserComponent implements OnInit, OnDestroy {
     } else {
       this.userSubscription.add(
         this.userService.deleteUser(this.authService.getUserMail()).subscribe({
-          next: () => {},
+          next: () => {
+            this.router.navigate(['/']);
+            this.authService.logout();
+          },
           error: (err) => console.log('Error: deleteMe()' + err),
         })
       );
-      this.router.navigate(['/']);
-      this.authService.logout();
     }
   }
 
@@ -114,6 +124,4 @@ export class UserComponent implements OnInit, OnDestroy {
       duration: 5000,
     });
   }
-  
-
 }

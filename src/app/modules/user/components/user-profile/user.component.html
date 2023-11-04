@@ -1,49 +1,74 @@
-<div class="container-center">
-    <div class="mt-2">
-        <div class="profile">
+<div class="container-center" *ngIf="deleteModal">
+    <div class="profile ">
+        <h3 class="profile--tittle">Borrar Perfil</h3>
+        <p>Esta acción es irreversible ¿Está seguro?</p>
+        <div class="container-btn">
+            <button class="btn" mat-raised-button color="primary" (click)="deleteModal=false">Cancelar</button>
+            <a class="btn btn-danger" mat-raised-button (click)="deleteMe()">Eliminar</a>
+        </div>
+    </div>
+</div>
 
-            <h1 class="profile--tittle">Edita Tu Perfil</h1>
+<div class="container-center" *ngIf="!deleteModal">
+    <div class="mt-2 profile">
+        <h1 class="profile--tittle">Edita Tu Perfil</h1>
 
-            <div class="profile--data">
-                <h2>Datos actuales: </h2>
-                <p><strong>ID:</strong> {{user.id}} </p>
-                <p><strong>Name:</strong> {{user.name}} </p>
-                <p><strong>Password:</strong> {{user.password}} </p>
-                <p><strong>Favoritos:</strong> {{user.favoritesCryptosName}} </p>
+        <div class="profile--data">
+            <h2>Datos actuales: </h2>
+            <p><strong>ID:</strong> {{user.id}} </p>
+            <p><strong>Name:</strong> {{user.name}} </p>
+            <p><strong>Password:</strong> {{user.password}} </p>
+            <p><strong>Favoritos:</strong> {{user.favoritesCryptosName}} </p>
+        </div>
+
+        <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
+
+            <mat-form-field>
+                <mat-label>Nombre de Usuario</mat-label>
+                <input matInput #inputName [formControl]="nameFormControl" [errorStateMatcher]="matcher"
+                    autocomplete="off">
+                <mat-error *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="nameFormControl.hasError('required')">
+                    Nombre de Usuario <strong>requerido</strong>
+                </mat-error>
+                <button *ngIf="nameFormControl.value" matSuffix mat-icon-button (click)="nameFormControl.reset()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <mat-form-field>
+                <mat-label>Introduce tu contraseña</mat-label>
+                <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
+                    [formControl]="passwordFormControl">
+                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    [attr.aria-pressed]="hide">
+                    <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
+                </button>
+                <mat-error
+                    *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
+                    Min {{minLength}} caracteres!
+                </mat-error>
+                <mat-error *ngIf="passwordFormControl.hasError('required')">
+                    Contraseña es <strong>requerida</strong>
+                </mat-error>
+                <button *ngIf="passwordFormControl.value" matSuffix mat-icon-button (click)="passwordFormControl.reset()">
+                    <mat-icon>close</mat-icon>
+                </button>
+            </mat-form-field>
+
+            <div class="container-btn">
+                <a class="btn btn-danger" mat-raised-button (click)="deleteModal=true">Eliminar</a>
+                <button class="btn" mat-raised-button color="primary" [disabled]="formLogin.invalid">Guardar</button>
             </div>
+        </form>
+        
+    </div>
+</div>
 
-            <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
 
-                <mat-form-field>
-                    <mat-label>Nombre de Usuario</mat-label>
-                    <input matInput #inputName [formControl]="nameFormControl" [errorStateMatcher]="matcher"
-                        autocomplete="off">
-                    <mat-error *ngIf="nameFormControl.hasError('minlength') && !nameFormControl.hasError('required')">
-                        Min {{minLength}} caracteres!
-                    </mat-error>
-                    <mat-error *ngIf="nameFormControl.hasError('required')">
-                        Nombre de Usuario <strong>requerido</strong>
-                    </mat-error>
-                </mat-form-field>
-
-                <mat-form-field>
-                    <mat-label>Introduce tu contraseña</mat-label>
-                    <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
-                        [formControl]="passwordFormControl">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                    <mat-error
-                        *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
-                        Min {{minLength}} caracteres!
-                    </mat-error>
-                    <mat-error *ngIf="passwordFormControl.hasError('required')">
-                        Contraseña es <strong>requerida</strong>
-                    </mat-error>
-                </mat-form-field>
- 
-              <!--  <mat-form-field>
+<!--  <mat-form-field>
                     <mat-label>Confirma tu contraseña</mat-label>
                     <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
                         [formControl]="passwordConfirmFormControl">
@@ -60,18 +85,8 @@
                     </mat-error>
                 </mat-form-field>-->
 
-                <!-- TODO: replicar estilo -->
-                <!-- <mat-error style="text-align: left; padding-left: 2.3rem; font-size: 0.8rem;"
+<!-- TODO: replicar estilo -->
+<!-- <mat-error style="text-align: left; padding-left: 2.3rem; font-size: 0.8rem;"
                     *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
                     Contraseñas <strong>diferentes</strong>
                 </mat-error>  -->
-
-                <div class="container-btn">
-                    <a class="btn btn-danger" mat-raised-button (click)="deleteMe()">Eliminar</a>
-                    <button class="btn" mat-raised-button color="primary"
-                        [disabled]="formLogin.invalid">Guardar</button>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
