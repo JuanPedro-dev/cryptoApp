@@ -28,7 +28,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
   private authService: AuthService = inject(AuthService);
   private subs: Subscription = new Subscription();
 
-  hide = true;
+  hide:boolean = true;
   minLength: number = 4;
 
   formLogin!: FormGroup;
@@ -59,6 +59,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
       password: this.passwordFormControl,
       favoritesCryptosName: this.favoritesCryptosNameFormControl
     });
+    
   }
 
   ngOnDestroy() {
@@ -66,6 +67,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
+    debugger
     // console.log(this.formLogin.value);
     try {
       this.subs.add(

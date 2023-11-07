@@ -2,11 +2,8 @@
 
 
 <div class="container-center">
-
     <div class=" mt-2">
-
         <div class="login">
-
             <h1 class="login--tittle">Crear una cuenta</h1>
 
             <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
@@ -42,10 +39,10 @@
                     <mat-label>Introduce tu contraseña</mat-label>
                     <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
                         [formControl]="passwordFormControl">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                    <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                         [attr.aria-pressed]="hide">
                         <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
+                    </span>
                     <mat-error
                         *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
                         Min {{minLength}} caracteres!
@@ -54,28 +51,6 @@
                         Contraseña es <strong>requerida</strong>
                     </mat-error>
                 </mat-form-field>
-
-                <!-- <mat-form-field>
-                    <mat-label>Confirma tu contraseña</mat-label>
-                    <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
-                        [formControl]="passwordConfirmFormControl">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                    <mat-error
-                        *ngIf="passwordConfirmFormControl.hasError('minlength') && !passwordConfirmFormControl.hasError('required')">
-                        Min {{minLength}} caracteres!
-                    </mat-error>
-                    <mat-error *ngIf="passwordConfirmFormControl.hasError('required')">
-                        Contraseña es <strong>requerida</strong>
-                    </mat-error>
-                </mat-form-field>
-
-                <mat-error style="text-align: left;"
-                    *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
-                    Contraseñas <strong>diferentes</strong>
-                </mat-error> -->
 
                 <div class="container-btn">
                     <a class="btn btn--create" mat-button color="primary" routerLink="/auth/sign-in">Login</a>

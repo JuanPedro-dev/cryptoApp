@@ -33,19 +33,19 @@
                 <mat-error *ngIf="nameFormControl.hasError('required')">
                     Nombre de Usuario <strong>requerido</strong>
                 </mat-error>
-                <button *ngIf="nameFormControl.value" matSuffix mat-icon-button (click)="nameFormControl.reset()">
+                <span *ngIf="nameFormControl.value" matSuffix mat-icon-button (click)="nameFormControl.reset()">
                     <mat-icon>close</mat-icon>
-                </button>
+                </span>
             </mat-form-field>
 
             <mat-form-field>
                 <mat-label>Introduce tu contraseña</mat-label>
                 <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
                     [formControl]="passwordFormControl">
-                <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
+                <span mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
                     [attr.aria-pressed]="hide">
                     <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                </button>
+                </span>
                 <mat-error
                     *ngIf="passwordFormControl.hasError('minlength') && !passwordFormControl.hasError('required')">
                     Min {{minLength}} caracteres!
@@ -53,9 +53,9 @@
                 <mat-error *ngIf="passwordFormControl.hasError('required')">
                     Contraseña es <strong>requerida</strong>
                 </mat-error>
-                <button *ngIf="passwordFormControl.value" matSuffix mat-icon-button (click)="passwordFormControl.reset()">
+                <span *ngIf="passwordFormControl.value" matSuffix mat-icon-button (click)="passwordFormControl.reset()">
                     <mat-icon>close</mat-icon>
-                </button>
+                </span>
             </mat-form-field>
 
             <div class="container-btn">
@@ -67,26 +67,3 @@
     </div>
 </div>
 
-
-<!--  <mat-form-field>
-                    <mat-label>Confirma tu contraseña</mat-label>
-                    <input autocomplete="off" matInput [type]="hide ? 'password' : 'text'" #inputPass
-                        [formControl]="passwordConfirmFormControl">
-                    <button mat-icon-button matSuffix (click)="hide = !hide" [attr.aria-label]="'Hide password'"
-                        [attr.aria-pressed]="hide">
-                        <mat-icon>{{hide ? 'visibility_off' : 'visibility'}}</mat-icon>
-                    </button>
-                    <mat-error
-                        *ngIf="passwordConfirmFormControl.hasError('minlength') && !passwordConfirmFormControl.hasError('required')">
-                        Min {{minLength}} caracteres!
-                    </mat-error>
-                    <mat-error *ngIf="passwordConfirmFormControl.hasError('required')">
-                        Contraseña es <strong>requerida</strong>
-                    </mat-error>
-                </mat-form-field>-->
-
-<!-- TODO: replicar estilo -->
-<!-- <mat-error style="text-align: left; padding-left: 2.3rem; font-size: 0.8rem;"
-                    *ngIf="passwordFormControl.value !== passwordConfirmFormControl.value">
-                    Contraseñas <strong>diferentes</strong>
-                </mat-error>  -->
