@@ -42,8 +42,8 @@
             <button mat-menu-item>
                   <span mat-button routerLink="/crypto/news">Noticias</span>
             </button>
-            <button mat-menu-item>
-                  <span mat-button routerLink="/users/dashboard" *ngIf="isAdmin">Dashboard</span>
+            <button mat-menu-item  *ngIf="isAdmin">
+                  <span mat-button routerLink="/users/dashboard">Dashboard</span>
             </button>
             <button mat-menu-item>
                   <span mat-button routerLink="/users/profile">Perfil</span>
