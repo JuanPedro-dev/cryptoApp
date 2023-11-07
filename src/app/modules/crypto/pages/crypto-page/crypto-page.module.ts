@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { CryptoPageRoutingModule } from './crypto-page-routing.module';
 import { CryptoPageComponent } from './crypto-page.component';
-import { NavbarComponent } from '../../components/navbar/navbar.component';
+import { NavbarComponent } from '../../../../shared/components/navbar crypto/navbar.component';
 
 import { MaterialModule } from '@shared/components/material/material.module';
 
