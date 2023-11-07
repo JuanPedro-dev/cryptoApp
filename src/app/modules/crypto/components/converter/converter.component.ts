@@ -5,7 +5,7 @@ import {
   FormGroup,
   Validators,
 } from '@angular/forms';
-import { Observable, startWith, map, Subscription } from 'rxjs';
+import { Subscription } from 'rxjs';
 import { CURRENCIES, Crypto } from './interface/ICrypto';
 import { calculatorService } from './service/calculador.service';
 import { MatSnackBar } from '@angular/material/snack-bar';

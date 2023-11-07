@@ -4,7 +4,23 @@ Tecnicatura Universitaria en Programación (UTN): vemos las herramientas, tecnol
 <br> 
 Este trabajo práctico esta enfocado en aplicar diferentes conceptos de diseño de software y frontend en una aplicación integral. 
 
+Para ejecutar la aplicación: 
 
+```
+npm install
+npm run server
+npm start
+```
+### Puntos claves: 
+
+Para el proyecto se tuvieron en cuenta diferentes aspectos: 
+
+* Maquetación Responsive. 
+* Consumo de APIs.
+* Uso de HttpClient.
+* Uso de librerías (Angular Material / UIkit).
+* Framework: Angular.
+* Uso de conceptos como Lazy Load, inyección de dependencias, observables y más. 
 
 <hr> <hr> <hr>
 

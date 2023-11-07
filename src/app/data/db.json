@@ -5,7 +5,8 @@
       "name": "Administrador",
       "password": "1234",
       "favoritesCryptosName": [
-        "BNB"
+        "BNB",
+        "Bitcoin"
       ]
     },
     {
