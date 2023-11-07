@@ -6,5 +6,6 @@ export const adminGuard: CanActivateFn = (route, state) => {
 
   if(sessionStorage.getItem('tokenAuthCrypto') == 'admin@gmail.com') return true
 
+  router.navigate(['', '/home'])
   return false;
 };

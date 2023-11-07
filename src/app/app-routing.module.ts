@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { LandingPageComponent } from '@modules/landing/components/landing-page/landing-page.component';
 import { authGuard } from './guards/auth.guard';
+import { loggedGuard } from './guards/logged.guard';
 
 const routes: Routes = [
   {
@@ -14,6 +15,7 @@ const routes: Routes = [
     path: 'auth',
     loadChildren: () =>
       import('./modules/auth/auth.module').then((m) => m.AuthModule),
+    canActivate: [loggedGuard],
   },
   {
     path: 'crypto',
