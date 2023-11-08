@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { Trending } from './interface/trendingCrypto';
 import { ServiceTrending } from './service/service.service';
 import { Subscription } from 'rxjs';
@@ -6,27 +6,26 @@ import { Subscription } from 'rxjs';
 @Component({
   selector: 'app-trending',
   templateUrl: './trending.component.html',
-  styleUrls: ['./trending.component.scss']
+  styleUrls: ['./trending.component.scss'],
 })
 export class TrendingComponent {
-  cryptoTrending: Trending = { coins: [], nfts: [] };
-  
-  constructor(private trendingResponse: ServiceTrending) {}
+  private trendingResponse: ServiceTrending = inject(ServiceTrending);
   private subscription: Subscription = new Subscription();
+  
+  cryptoTrending: Trending = { coins: [], nfts: [] };
 
   ngOnInit() {
     this.getListTrending();
   }
 
   getListTrending() {
-    this.subscription = this.trendingResponse.getTrending().subscribe(
-      (data: Trending) => this.cryptoTrending = data,
-      (error) => console.error('Error fetching Trending data:', error)
-    );
+    this.subscription = this.trendingResponse.getTrending().subscribe({
+      next: (data: Trending) => (this.cryptoTrending = data),
+      error: (err) => console.error('Error getTrending():', err),
+    });
   }
 
   ngOnDestroy() {
     this.subscription.unsubscribe();
   }
-
 }

@@ -1,5 +1,4 @@
 import { Component, OnDestroy, OnInit, ViewChild, inject } from '@angular/core';
-import { Price } from '../../../../core/interface/price';
 import { PriceService } from './service/price.service';
 import { Subscription } from 'rxjs';
 
@@ -9,6 +8,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { User } from '@core/interface/user';
 import { AuthService } from '@core/services/auth.service';
 import { UserService } from '@core/services/user.service';
+import { Price } from './interface/price';
 
 @Component({
   selector: 'app-precio',
@@ -38,14 +38,12 @@ export class PriceComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.onLoad();
-    this.subs.add(
-      this.authService
-        .getUser()
-        .subscribe({
-          next: (user: User) => (this.currentUser = user ?? new User()),
-          error: (err: any) => console.log(err),
-        })
-    );
+
+    const subscription = this.authService.getUser().subscribe({
+      next: (user: User) => (this.currentUser = user ?? new User()),
+      error: (err: any) => console.log(err),
+    });
+    this.subs.add(subscription);
   }
 
   ngAfterViewInit() {
@@ -56,9 +54,7 @@ export class PriceComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.subs) {
-      this.subs.unsubscribe();
-    }
+    this.subs.unsubscribe();
   }
 
   applyFilter(event: Event) {
@@ -71,31 +67,30 @@ export class PriceComponent implements OnInit, OnDestroy {
   }
 
   onLoad(): void {
-    this.subs.add(
-      // en caso de bloqueo, cambie el método getListCriptoPrice() por getCryptocurrencies()
-
-      // this.cryptoService.getListCriptoPrice().subscribe({
-      this.cryptoService.getCryptocurrencies().subscribe({
-        next: (prices: Price[]) => {
-          this.dataArray = prices;
-          this.dataSource = new MatTableDataSource<Price>(this.dataArray);
-          this.dataSource.paginator = this.paginator;
-          this.dataSource.sort = this.sort;
-        },
-        error: (err: Error) => {
-          console.error('Observer got an error: ' + err);
-          this.dataSource = new MatTableDataSource<Price>(this.dataArray);
-        },
-      })
-    );
+    // en caso de bloqueo, cambie el método getListCryptoPrice() por getCryptocurrencies()
+    const subscription = this.cryptoService.getListCryptoPrice().subscribe({
+      next: (prices: Price[]) => {
+        this.dataArray = prices;
+        this.dataSource = new MatTableDataSource<Price>(this.dataArray);
+        this.dataSource.paginator = this.paginator;
+        this.dataSource.sort = this.sort;
+      },
+      error: (err: Error) => {
+        console.error('Observer got an error getListCryptoPrice(): ' + err);
+        this.dataSource = new MatTableDataSource<Price>(this.dataArray);
+      },
+    });
+    this.subs.add(subscription);
   }
 
   addToFav(name: string): void {
-    if(this.currentUser.favoritesCryptosName.includes(name)) 
-      this.currentUser.favoritesCryptosName = this.currentUser.favoritesCryptosName.filter(item => item !== name);
-    else 
-    this.currentUser.favoritesCryptosName.push(name);
+    if (this.currentUser.favoritesCryptosName.includes(name))
+      this.currentUser.favoritesCryptosName =
+        this.currentUser.favoritesCryptosName.filter((item) => item !== name);
+    else this.currentUser.favoritesCryptosName.push(name);
 
-    this.userService.updateUser(this.currentUser).subscribe({error: (err: any) => console.log(err)})
+    this.userService
+      .updateUser(this.currentUser)
+      .subscribe({ error: (err: any) => console.log(err) });
   }
 }

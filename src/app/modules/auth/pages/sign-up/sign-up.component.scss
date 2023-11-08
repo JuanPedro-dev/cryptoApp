@@ -2,10 +2,9 @@
   min-height: 90vh;
 }
 
-.login {
+.register {
   max-width: 420px;
   text-align: center;
-
   
   @media screen and (min-width: 600px) {
     & {
@@ -20,19 +19,19 @@
       padding-right: 0;
     }
 
-    .login--tittle{
+    .register--tittle{
       color: black;
     }
   }
 }
 
-.login--tittle {
+.register--tittle {
   font-size: 2rem;
   font-weight: 500;
   color: white;
 }
 
-.login-img {
+.register-img {
   display: flex;
   margin-inline: auto;
   max-width: 5rem;

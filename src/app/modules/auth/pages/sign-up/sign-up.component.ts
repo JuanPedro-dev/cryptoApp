@@ -28,7 +28,7 @@ export class SignUpComponent implements OnInit, OnDestroy {
   private authService: AuthService = inject(AuthService);
   private subs: Subscription = new Subscription();
 
-  hide:boolean = true;
+  hide: boolean = true;
   minLength: number = 4;
 
   formLogin!: FormGroup;
@@ -57,9 +57,8 @@ export class SignUpComponent implements OnInit, OnDestroy {
       id: this.emailFormControl,
       name: this.nameFormControl,
       password: this.passwordFormControl,
-      favoritesCryptosName: this.favoritesCryptosNameFormControl
+      favoritesCryptosName: this.favoritesCryptosNameFormControl,
     });
-    
   }
 
   ngOnDestroy() {
@@ -67,24 +66,24 @@ export class SignUpComponent implements OnInit, OnDestroy {
   }
 
   onSubmit(): void {
-    debugger
-    // console.log(this.formLogin.value);
     try {
-      this.subs.add(
-        this.userService.addUser(this.formLogin.value).subscribe({
+      const subscription = this.userService.addUser(this.formLogin.value).subscribe({
           next: (user: User) => {
             if (user != undefined) {
               this.authService.login(user.id);
               this.router.navigate(['/crypto']);
               this.formLogin.reset();
             } else {
-              this.launchError()
+              this.launchError();
             }
           },
           error: (err: Error) => console.error('Observer got an error: ' + err),
-        })
-      );
-    } catch (err) { console.log("try error" + err);}
+        });
+
+      this.subs.add(subscription);
+    } catch (err) {
+      console.log('try error' + err);
+    }
   }
 
   launchError(): void {
@@ -94,6 +93,4 @@ export class SignUpComponent implements OnInit, OnDestroy {
       duration: 8000,
     });
   }
-
 }
-

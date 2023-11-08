@@ -6,6 +6,6 @@ export const authGuard: CanActivateFn = (route, state) => {
 
   if(sessionStorage.getItem('tokenAuthCrypto') != null) return true
 
-  router.navigate(['', '/home'])
+  router.navigate(['', '/home']);
   return false;
 };

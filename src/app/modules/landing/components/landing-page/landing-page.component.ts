@@ -31,7 +31,7 @@ export class LandingPageComponent implements OnInit{
   }
   
   onSubmit(form: NgForm): void {
-    console.log('Form values', form.value);
+    console.log('Simulamos un envió de datos: ', form.value);
 
     this.show = true;
     form.reset(); 

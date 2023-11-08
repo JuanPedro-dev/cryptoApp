@@ -46,7 +46,6 @@ export class SignInComponent implements OnInit {
   ngOnInit(): void {
 
     // Verifico que no este logueado, para redirigir
-
     let token = sessionStorage.getItem( 'token' ); 
     if( token ) this.router.navigate( ['/crypto'] );
 
@@ -59,7 +58,6 @@ export class SignInComponent implements OnInit {
   onSubmit(): void {
     const subscription = this.validateAuth().subscribe({
       next: (res: boolean) => {
-
         if (res) {
           this.authService.login(this.mailFormControl.value!)
           this.router.navigate(['/crypto']); 
@@ -79,7 +77,7 @@ export class SignInComponent implements OnInit {
   }
 
   validateAuth(): Observable<boolean> {
-    // Valida el front pero por si llega undefined o null
+    // Valida el front pero nos aseguramos
     const userMail: string = this.mailFormControl.value ?? '';
     const userPassword: string = this.passwordFormControl.value ?? '';
 

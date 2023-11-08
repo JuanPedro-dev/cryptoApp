@@ -1,13 +1,11 @@
 <app-nav-bar></app-nav-bar>
 
-
 <div class="container-center">
     <div class=" mt-2">
-        <div class="login">
-            <h1 class="login--tittle">Crear una cuenta</h1>
+        <div class="register">
+            <h1 class="register--tittle">Crear una cuenta</h1>
 
             <form (ngSubmit)="onSubmit()" [formGroup]="formLogin">
-
                 <mat-form-field>
                     <mat-label>Nombre de Usuario</mat-label>
                     <input matInput #inputName [formControl]="nameFormControl" [errorStateMatcher]="matcher"

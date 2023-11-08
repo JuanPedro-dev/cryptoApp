@@ -10,12 +10,34 @@ const routes: Routes = [
       {
         path: '',
         redirectTo: 'price',
-        pathMatch: 'full'
+        pathMatch: 'full',
       },
-      { path: 'price', loadChildren: () => import('../../components/price/price.module').then(m => m.PriceModule) },
-      { path: 'converter', loadChildren: () => import('../../components/converter/converter.module').then(m => m.ConverterModule) },
-      { path: 'trending', loadChildren: () => import('../../components/trending/trending.module').then(m => m.TrendingModule) },
-      { path: 'news', loadChildren: () => import('../../components/news/news.module').then(m => m.NewsModule) },
+      {
+        path: 'price',
+        loadChildren: () =>
+          import('../../components/price/price.module').then(
+            (m) => m.PriceModule
+          ),
+      },
+      {
+        path: 'converter',
+        loadChildren: () =>
+          import('../../components/converter/converter.module').then(
+            (m) => m.ConverterModule
+          ),
+      },
+      {
+        path: 'trending',
+        loadChildren: () =>
+          import('../../components/trending/trending.module').then(
+            (m) => m.TrendingModule
+          ),
+      },
+      {
+        path: 'news',
+        loadChildren: () =>
+          import('../../components/news/news.module').then((m) => m.NewsModule),
+      },
     ],
   },
 ];

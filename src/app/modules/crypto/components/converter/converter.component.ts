@@ -30,13 +30,8 @@ export class ConverterComponent implements OnInit, OnDestroy {
   cryptoFormControl = new FormControl('', Validators.required);
   currencyFormControl = new FormControl('', Validators.required);
 
-  // Valores iniciales (filtrar)
   CURRENCIES = CURRENCIES;
   cryptoCalculator: Crypto = { Data: [], RAW: [] };
-
-  // // Valores Filtrados (Mostrar)
-  // filteredCrypto: Observable<string[]> = new Observable();
-  // filteredCurrency: Observable<string[]> = new Observable();
 
   ngOnInit() {
     this.form = this.formBuilder.group({
@@ -66,46 +61,45 @@ export class ConverterComponent implements OnInit, OnDestroy {
   calculate() {
     const divisaSeleccionada: any = this.currencyFormControl.value;
     const criptomonedaSeleccionada: any = this.cryptoFormControl.value;
+
     if (divisaSeleccionada && criptomonedaSeleccionada) {
-      this.subs.add(
-        this.calculatorService
-          .getResponseCrypto(criptomonedaSeleccionada, divisaSeleccionada)
-          .subscribe({
-            
-            next: (crypto: Crypto) => {
-              try{
-                if (
-                  crypto.RAW[criptomonedaSeleccionada] &&
-                  crypto.RAW[criptomonedaSeleccionada][divisaSeleccionada]
-                ) {
-                  const { PRICE } = crypto.RAW[criptomonedaSeleccionada][divisaSeleccionada];
-                  this.price = +PRICE.toFixed(2);
-                  this.price *= this.valueFormControl.value;
-                  this.showResult = true;
-                }
-              } catch{
-                this.launchError();
-                this.valueFormControl.reset();
-                this.cryptoFormControl.reset();
-                this.currencyFormControl.reset();
-                this.showResult = false;
+      const subscription = this.calculatorService.getResponseCrypto(criptomonedaSeleccionada, divisaSeleccionada)
+        .subscribe({
+          next: (crypto: Crypto) => {
+            try {
+              if (
+                crypto.RAW[criptomonedaSeleccionada] &&
+                crypto.RAW[criptomonedaSeleccionada][divisaSeleccionada]
+              ) {
+                const { PRICE } =
+                  crypto.RAW[criptomonedaSeleccionada][divisaSeleccionada];
+                this.price = +PRICE.toFixed(2);
+                this.price *= this.valueFormControl.value;
+                this.showResult = true;
               }
-            },
-            error: (error) => console.error(
-                'Error: getResponseCrypto() =>',
-                error
-              )
-          }
-          )
-      );
+            } catch {
+              this.launchError();
+              this.valueFormControl.reset();
+              this.cryptoFormControl.reset();
+              this.currencyFormControl.reset();
+              this.showResult = false;
+            }
+          },
+          error: (error) =>
+            console.error('Error: getResponseCrypto() =>', error),
+        });
+      this.subs.add(subscription);
     }
   }
 
   launchError(): void {
-    this._snackBar.open('Verificar que los datos pertenezcan a los disponibles!', '', {
-      horizontalPosition: 'center',
-      verticalPosition: 'bottom',
-      duration: 5000,
-    });
+    this._snackBar.open(
+      'Verificar que los datos pertenezcan a los disponibles!', '',
+      {
+        horizontalPosition: 'center',
+        verticalPosition: 'bottom',
+        duration: 5000,
+      }
+    );
   }
 }

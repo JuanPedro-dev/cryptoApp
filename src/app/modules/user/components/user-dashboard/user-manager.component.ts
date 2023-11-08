@@ -10,7 +10,7 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 @Component({
   selector: 'app-user-manager',
   templateUrl: './user-manager.component.html',
-  styleUrls: ['./user-manager.component.scss']
+  styleUrls: ['./user-manager.component.scss'],
 })
 export class UserManagerComponent implements OnInit, OnDestroy {
   private dataArray: User[] = [];
@@ -23,10 +23,9 @@ export class UserManagerComponent implements OnInit, OnDestroy {
   @ViewChild(MatSort, { static: true }) sort!: MatSort;
 
   displayedColumns: string[] = ['id', 'name', 'password', 'edit'];
-  
 
   ngOnInit() {
-    this.onLoad();  
+    this.onLoad();
   }
 
   ngAfterViewInit() {
@@ -37,9 +36,7 @@ export class UserManagerComponent implements OnInit, OnDestroy {
   }
 
   ngOnDestroy() {
-    if (this.subs) {
-      this.subs.unsubscribe();
-    }
+    this.subs.unsubscribe();
   }
 
   applyFilter(event: Event) {
@@ -52,22 +49,20 @@ export class UserManagerComponent implements OnInit, OnDestroy {
   }
 
   deleteUser(userID: string) {
-
-    if(userID == 'admin@gmail.com' ) {
+    if (userID == 'admin@gmail.com') {
       this.launchError();
     } else {
-      this.userService.deleteUser(userID).subscribe({
+      const subscription = this.userService.deleteUser(userID).subscribe({
         next: () => {},
-        error: (err: Error) => {
-          console.error('Observer got an error: ' + err);
-        },
+        error: (err: Error) => console.error('Observer got an error: ' + err),
         complete: () => this.onLoad(),
-      })
+      });
+      this.subs.add(subscription);
     }
   }
-  
-  onLoad():void{
-    this.userService.getUsers().subscribe({
+
+  onLoad(): void {
+    const subscription = this.userService.getUsers().subscribe({
       next: (users: User[]) => {
         this.dataArray = users;
         this.dataSource = new MatTableDataSource<User>(this.dataArray);
@@ -77,10 +72,10 @@ export class UserManagerComponent implements OnInit, OnDestroy {
       error: (err: Error) => {
         console.error('Observer got an error: ' + err);
         this.dataSource = new MatTableDataSource<User>(this.dataArray);
-      }
-    })
+      },
+    });
+    this.subs.add(subscription);
   }
-  
 
   launchError(): void {
     this._snackBar.open('¡No puedes eliminar al admin!', '', {
@@ -89,5 +84,4 @@ export class UserManagerComponent implements OnInit, OnDestroy {
       duration: 5000,
     });
   }
-
 }

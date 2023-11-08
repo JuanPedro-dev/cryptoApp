@@ -1,12 +1,9 @@
-import { Price } from "./price";
-
 export interface User {
   id: string;
   name: string;
   password: string;
   favoritesCryptosName: string[]
 }
-
 
 export class User implements User {
   constructor(user?: User) {
