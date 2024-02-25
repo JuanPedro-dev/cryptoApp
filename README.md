@@ -2,15 +2,39 @@
 
 Tecnicatura Universitaria en Programación (UTN): vemos las herramientas, tecnologías y lenguajes básicos en el desarrollo web. 
 <br> 
-Este trabajo práctico esta enfocado en aplicar diferentes conceptos de diseño de software y frontend en una aplicación integral. 
+Este trabajo práctico esta enfocado en aplicar diferentes conceptos de diseño de software y frontend en una aplicación integral. <br>
 
-Para ejecutar la aplicación: 
+## Instalación Global
+
+Instalar dependencias: 
 
 ```
-npm install
+npm install -g @angular/cli@16
+npm install json-server
+```
+Ejecutar dependencias: 
+
+```
 npm run server
 npm start
 ```
+
+## Instalación Local:
+
+Instalar dependencias: 
+
+```
+npx -p @angular/cli@16
+npx json-server
+
+```
+Ejecutar dependencias: 
+
+```
+npx json-server --watch src\app\data\db.json
+npx ng serve
+```
+
 ### Puntos claves: 
 
 Para el proyecto se tuvieron en cuenta diferentes aspectos: 
